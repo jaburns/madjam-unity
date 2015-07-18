@@ -36,7 +36,6 @@ public class MooseController : MonoBehaviour
 
     int _canJumpCounter;
     int _cantSnapCounter;
-    bool _jumpStarted;
     int _jumpFrames;
     bool _faceRight = true;
 
@@ -72,22 +71,14 @@ public class MooseController : MonoBehaviour
 
         bool pressingLeft = false;
         bool pressingRight = false;
-        bool pressingJump = false;
-
 
         if (_blobBinder.HasBlob) {
-            for (int i = 0 ; i < Input.touches.Length ; ++i) {
-                    if (Input.touches[i].position.x < Screen.width  / 4) pressingLeft = true;
-                else if (Input.touches[i].position.x < Screen.width  / 2) pressingRight = true;
-                else  pressingJump = true;
-            }
-            pressingLeft |= Input.GetKey(KeyCode.LeftArrow);
-            pressingRight |= Input.GetKey(KeyCode.RightArrow);
-            pressingJump |= Input.GetKey(KeyCode.UpArrow);
+            pressingLeft = Controls.IsDown(Controls.Instance.Left);
+            pressingRight = Controls.IsDown(Controls.Instance.Right);
         }
 
         handleRun(pressingLeft, pressingRight);
-        handleJump(pressingJump);
+        handleJump();
 
         if (_snap.enabled) {
             _canJumpCounter = 3;
@@ -155,7 +146,6 @@ public class MooseController : MonoBehaviour
         } else if (normalIsRoof(hit.normal)) {
             if (_vel.y > 0) {
                 _vel.y = 0;
-                _jumpStarted = false;
             }
             newPos.y = (hit.point - Vector2.up * _heroDim.Height).y;
 
@@ -239,28 +229,9 @@ public class MooseController : MonoBehaviour
         }
     }
 
-    void handleJump(bool jumpButtonPressed)
+    void handleJump()
     {
-        if (jumpButtonPressed) {
-            if (_canJumpCounter > 0 && !_jumpStarted) {
-                _jumpStarted = true;
-                endSnap();
-            }
-        }
-        else {
-            _jumpStarted = false;
-        }
-
-        if (_jumpStarted) {
-            _vel.y = JUMP;
-            _jumpFrames++;
-            _jumpStarted &= _jumpFrames < JUMP_FRAMES;
-        } else if (_vel.y > 0) {
-            _vel.y -= JUMP_END_GRAVITY;
-        } else {
-            _vel.y -= GRAVITY;
-        }
-
+        _vel.y -= GRAVITY;
         if (_vel.y < -MAX_FALL) {
             _vel.y = -MAX_FALL;
         }

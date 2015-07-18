@@ -34,6 +34,16 @@ public class Controls : MonoBehaviour
     public ControlState Act   { get { return _act; } }
     public ControlState Swap  { get { return _swap; } }
 
+    static public bool IsDown(ControlState state)
+    {
+        return state == ControlState.Press || state == ControlState.Hold;
+    }
+
+    static public bool IsUp(ControlState state)
+    {
+        return state == ControlState.Release || state == ControlState.Up;
+    }
+
     void FixedUpdate()
     {
         updateStateFromSignal(ref _left,  Input.GetKey(LEFT ));
@@ -60,4 +70,5 @@ public class Controls : MonoBehaviour
             }
         }
     }
+
 }
