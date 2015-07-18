@@ -43,10 +43,12 @@ To swap between animals, you must bring your currently possessed animal within r
 * Idle
 * Flapping
 * Dying
+
 **Rushing**
 * Idle
 * Rushing
 * Dying
+
 **Climbing**
 * Idle
 * Climbing/Walking
