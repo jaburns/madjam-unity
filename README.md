@@ -37,3 +37,17 @@ To swap between animals, you must bring your currently possessed animal within r
 * Tap the animal to swap instead of having a dedicated button for swapping
 * Left half of the screen is a reactive/responsive virtual d-pad. ie. it will register your initial tap as the 0,0 origin so you are disoriented. 
 * Second (right) half of the screen would be a giant touch zone for your action button
+
+## Animation
+**Flying**
+* Idle
+* Flapping
+* Dying
+**Rushing**
+* Idle
+* Rushing
+* Dying
+**Climbing**
+* Idle
+* Climbing/Walking
+* Falling/Dropping
