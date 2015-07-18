@@ -2,10 +2,15 @@
 
 public class BlobController : MonoBehaviour
 {
+    public float BindRange;
+
     BlobBinder _binder;
 
     void FixedUpdate()
     {
+        if (_binder == null) {
+            bindTo(getClosestBinder());
+        }
         if (Controls.Instance.Swap == Controls.ControlState.Press) {
             bindTo(getClosestBinder());
         }
@@ -13,14 +18,30 @@ public class BlobController : MonoBehaviour
 
     BlobBinder getClosestBinder()
     {
+        float closestDist = float.MaxValue;
+        BlobBinder closestBinder = null;
+
         foreach (var binder in FindObjectsOfType<BlobBinder>()) {
-            if (!binder.HasBlob) return binder;
+            if (binder.HasBlob) continue;
+            var d2 = (binder.transform.position.WithZ(0) - transform.position.WithZ(0)).sqrMagnitude;
+            if (d2 < closestDist) {
+                closestDist = d2;
+                closestBinder = binder;
+            }
         }
-        return null;
+
+        return closestDist < BindRange*BindRange ? closestBinder : null;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, BindRange);
     }
 
     void bindTo(BlobBinder binder)
     {
+        if (binder == null) return;
         if (_binder) _binder.HasBlob = false;
 
         _binder = binder;
