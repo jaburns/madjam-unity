@@ -28,8 +28,10 @@ To swap between animals, you must bring your currently possessed animal within r
 
 ## Environmental Hazards (WIP/need to flush out more)
 * Spikes (walls, roof, floor)
-* Brambles (Like spikes, but only a certain type of animal can pass through)
 * Pits (drop to your doom)
+* Brambles (Like spikes, but only a certain type of animal can pass through)
+* Boulders/hard bricks (can only be smashed through)
+* Slippery walls (spider cant cling)
 
 ## Mobile Considerations
 * Tap the animal to swap instead of having a dedicated button for swapping
