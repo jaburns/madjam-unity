@@ -3,7 +3,7 @@ using UnityEngine;
 public class MooseController : MonoBehaviour
 {
     // Ratio of Flash game coordinate space to Unity units.
-    const float MOVEMENT_SCALE = 0.62f / 17.6f;
+    public const float MOVEMENT_SCALE = 0.62f / 17.6f;
     //3.5227e-2f
 
     // Left/right movement
@@ -34,9 +34,7 @@ public class MooseController : MonoBehaviour
     Vector2 _oldPosition;
     Vector2 _vel;
 
-    int _canJumpCounter;
     int _cantSnapCounter;
-    int _jumpFrames;
     bool _faceRight = true;
 
     BlobBinder _blobBinder;
@@ -81,8 +79,6 @@ public class MooseController : MonoBehaviour
         handleJump();
 
         if (_snap.enabled) {
-            _canJumpCounter = 3;
-
             var updateResult = _snap.UpdatePosition(_vel.x, normalIsGround);
 
             if (updateResult.solidWallCollision) {
@@ -93,7 +89,6 @@ public class MooseController : MonoBehaviour
                 freeMovement();
             }
         } else {
-            _canJumpCounter--;
             freeMovement();
         }
     }
@@ -191,7 +186,6 @@ public class MooseController : MonoBehaviour
 
     void startSnap(Collider2D coll, Rigidbody2D rb, Vector2 pt, Vector2 normal)
     {
-        _jumpFrames = 0;
         _snap.SnapTo(coll, rb, pt, normal, _vel);
     }
 
