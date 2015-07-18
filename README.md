@@ -17,11 +17,11 @@ To swap between animals, you must bring your currently possessed animal within r
 * Dark, damp, but colourful, strange and wonderful
 
 ## Animal Mechanics
-### Flying/flapping
+**Flying/flapping**
 * Possess a flying creature to flap around, avoiding obstacles and navigating tight spaces. 
-### Rushing/Charging
+**Rushing/Charging**
 * Charge forward and smash through obstacles. Look out for pits and traps
-### Climbing/Clinging
+**Climbing/Clinging**
 * Cling to walls and roofs to navigate difficult terrain. You can drop off terrain, but be careful not to fall into any traps. While clinging, you follow the surface you are on.
 
 ## Environmental Hazards (WIP/need to flush out more)
