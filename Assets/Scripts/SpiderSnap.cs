@@ -108,6 +108,11 @@ public class SpiderSnap : MonoBehaviour
 
         if (hit.point.VeryNear(p0)) return false;
 
+        if (hit.collider.gameObject.tag == "Slippy") {
+            Unsnap();
+            return true;
+        }
+
         moveToSurfaceCoord(worldCoordsToSurfaceCoords(hit.point, hit.normal));
         return true;
     }
