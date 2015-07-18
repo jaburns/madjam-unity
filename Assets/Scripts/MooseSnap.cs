@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroSnap : MonoBehaviour
+public class MooseSnap : MonoBehaviour
 {
     public struct UpdateResult
     {
@@ -35,7 +35,7 @@ public class HeroSnap : MonoBehaviour
     SurfaceCoords _lastPos;
     bool _updateFlag;
     bool _justSnapped;
-    HeroDimensions _heroDim;
+    MooseDimensions _heroDim;
 
     Vector2 _lastWorldPos;
     Vector2 _curWorldPos;
@@ -47,7 +47,7 @@ public class HeroSnap : MonoBehaviour
     void Awake()
     {
         enabled = false;
-        _heroDim = GetComponent<HeroDimensions>();
+        _heroDim = GetComponent<MooseDimensions>();
     }
 
     void Update()
@@ -209,7 +209,7 @@ public class HeroSnap : MonoBehaviour
     {
         pushed = false;
 
-        var result = DoubleLineCast.Cast(p0, p1, HeroController.CollisionLayerMask);
+        var result = DoubleLineCast.Cast(p0, p1, MooseController.CollisionLayerMask);
         if (!result.HasValue) return null;
         if (normalCheck(result.Value.normal)) return null;
 
@@ -225,7 +225,7 @@ public class HeroSnap : MonoBehaviour
     SnapResult linecastAndSnap(Vector2 p0, Vector2 p1) { return linecastAndSnap(p0, p1, Vector2.zero); }
     SnapResult linecastAndSnap(Vector2 p0, Vector2 p1, Vector2 offset)
     {
-        var hitsPrime = Physics2D.LinecastAll(p0, p1, HeroController.CollisionLayerMask);
+        var hitsPrime = Physics2D.LinecastAll(p0, p1, MooseController.CollisionLayerMask);
         var hitsDos = new List<RaycastHit2D>();
         for (var i = 0; i < hitsPrime.Length; ++i) {
             if (_targetBody) {

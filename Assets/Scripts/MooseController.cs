@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HeroController : MonoBehaviour
+public class MooseController : MonoBehaviour
 {
     // Ratio of Flash game coordinate space to Unity units.
     const float MOVEMENT_SCALE = 0.62f / 17.6f;
@@ -27,8 +27,8 @@ public class HeroController : MonoBehaviour
         );
     } }
 
-    HeroDimensions _heroDim;
-    HeroSnap _snap;
+    MooseDimensions _heroDim;
+    MooseSnap _snap;
 
     Vector2 _newPosition;
     Vector2 _oldPosition;
@@ -38,8 +38,9 @@ public class HeroController : MonoBehaviour
     int _cantSnapCounter;
     bool _jumpStarted;
     int _jumpFrames;
-    bool _holdRight;
     bool _faceRight = true;
+
+    BlobBinder _blobBinder;
 
     public Vector2 Position { get { return _snap.enabled ? _snap.Position : _newPosition; } }
     public Vector2 Velocity { get { return _snap.enabled ? _snap.VelocityEstimate : _vel; } }
@@ -50,8 +51,9 @@ public class HeroController : MonoBehaviour
         _newPosition = transform.position.AsVector2();
         _oldPosition = _newPosition;
 
-        _snap = GetComponent<HeroSnap>();
-        _heroDim = GetComponent<HeroDimensions>();
+        _snap = GetComponent<MooseSnap>();
+        _heroDim = GetComponent<MooseDimensions>();
+        _blobBinder = GetComponentInChildren<BlobBinder>();
 
         endSnap();
     }
@@ -71,20 +73,18 @@ public class HeroController : MonoBehaviour
         bool pressingLeft = false;
         bool pressingRight = false;
         bool pressingJump = false;
-        for (int i = 0 ; i < Input.touches.Length ; ++i) {
-                 if (Input.touches[i].position.x < Screen.width  / 4) pressingLeft = true;
-            else if (Input.touches[i].position.x < Screen.width  / 2) pressingRight = true;
-            else  pressingJump = true;
+
+
+        if (_blobBinder.HasBlob) {
+            for (int i = 0 ; i < Input.touches.Length ; ++i) {
+                    if (Input.touches[i].position.x < Screen.width  / 4) pressingLeft = true;
+                else if (Input.touches[i].position.x < Screen.width  / 2) pressingRight = true;
+                else  pressingJump = true;
+            }
+            pressingLeft |= Input.GetKey(KeyCode.LeftArrow);
+            pressingRight |= Input.GetKey(KeyCode.RightArrow);
+            pressingJump |= Input.GetKey(KeyCode.UpArrow);
         }
-
-        if (Input.GetKeyDown(KeyCode.Q)) _holdRight = !_holdRight;
-
-        pressingLeft |= Input.GetKey(KeyCode.LeftArrow);
-        pressingRight |= Input.GetKey(KeyCode.RightArrow);
-        pressingJump |= Input.GetKey(KeyCode.UpArrow);
-
-        pressingRight |= _holdRight;
-        pressingJump |= _holdRight;
 
         handleRun(pressingLeft, pressingRight);
         handleJump(pressingJump);

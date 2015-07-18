@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class HeroDimensions : MonoBehaviour
+public class MooseDimensions : MonoBehaviour
 {
     public Color GizmoColor = Color.red;
 
