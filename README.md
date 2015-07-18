@@ -29,6 +29,7 @@ To swap between animals, you must bring your currently possessed animal within r
 ## Environmental Hazards (WIP/need to flush out more)
 * Spikes (walls, roof, floor)
 * Pits (drop to your doom)
+* Moving platforms (crushing/timing)
 * Brambles (Like spikes, but only a certain type of animal can pass through)
 * Boulders/hard bricks (can only be smashed through)
 * Slippery walls (spider cant cling)
