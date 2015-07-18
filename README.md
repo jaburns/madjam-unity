@@ -30,7 +30,7 @@ To swap between animals, you must bring your currently possessed animal within r
 * Spikes (walls, roof, floor)
 * Pits (drop to your doom)
 * Moving platforms (crushing/timing) (constantly moving/activated)
-* Brambles (Like spikes, but only a certain type of animal can pass through)
+* Brambles (Like spikes, but only affects flying)
 * Boulders/hard bricks (can only be smashed through)
 * Slippery walls (spider cant cling)
 
