@@ -6,6 +6,11 @@ public class BlobController : MonoBehaviour
 
     BlobBinder _binder;
 
+    void Awake()
+    {
+        GravitySetting.Reset();
+    }
+
     void FixedUpdate()
     {
         if (_binder == null) {
@@ -13,6 +18,7 @@ public class BlobController : MonoBehaviour
         }
         if (Controls.Instance.Swap == Controls.ControlState.Press) {
             bindTo(getClosestBinder());
+            GravitySetting.SwitchGravity();
         }
     }
 

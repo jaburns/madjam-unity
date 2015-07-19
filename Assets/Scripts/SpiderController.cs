@@ -2,7 +2,7 @@
 
 public class SpiderController : MonoBehaviour
 {
-    const float GRAVITY  =  2 * MooseController.MOVEMENT_SCALE;
+    float GRAVITY  =  2 * MooseController.MOVEMENT_SCALE;
     const float MAX_FALL = 16 * MooseController.MOVEMENT_SCALE;
     const float SPEED    = 0.3f;
 
@@ -23,6 +23,16 @@ public class SpiderController : MonoBehaviour
         _blobBinder = GetComponentInChildren<BlobBinder>();
     }
 
+    void Start()
+    {
+        GravitySetting.OnGravitySwitch += GravitySwitch;
+    }
+
+    void GravitySwitch()
+    {
+        GRAVITY *= -1;
+    }
+
     void Update()
     {
         var p0 = _oldPosition.AsVector3(transform.position.z);
@@ -30,9 +40,18 @@ public class SpiderController : MonoBehaviour
         transform.position = Vector3.Lerp(p0, p1, (Time.time - Time.fixedTime) / Time.fixedDeltaTime);
     }
 
-    static bool isNormalLetGoable(Vector2 normal)
+    public bool isNormalLetGoable(Vector2 normal)
     {
-        return normal.y < 0.5f;
+        return GRAVITY > 0 ? (normal.y < 0.5f) : (normal.y > -0.5f);
+    }
+
+    void endSnap()
+    {
+        _snap.Unsnap();
+        _vely = 0;
+        _fallCheckCountdown = 2;
+        _oldPosition = transform.position.AsVector2();
+        _newPosition = _oldPosition + _snap.Normal * 0.2f;
     }
 
     void FixedUpdate()
@@ -58,8 +77,8 @@ public class SpiderController : MonoBehaviour
             }
         } else {
             _vely -= GRAVITY;
-            if (_vely < -MAX_FALL) {
-                _vely = -MAX_FALL;
+            if (Mathf.Abs(_vely) > MAX_FALL) {
+                _vely = (GRAVITY < 0) ? MAX_FALL : -MAX_FALL;
             }
             _newPosition.y += _vely;
 
@@ -67,7 +86,7 @@ public class SpiderController : MonoBehaviour
                 _fallCheckCountdown--;
             } else {
                 var p0 = transform.position.AsVector2();
-                var p1 = transform.position.AsVector2() + (Vector2.up*_vely);
+                var p1 = transform.position.AsVector2() + (Vector2.up*_vely*1.5f);
                 var hit = Physics2D.Linecast(p0, p1);
                 if (hit.rigidbody && !isNormalLetGoable(hit.normal) && !p0.VeryNear(hit.point)) {
                     _snap.SnapTo(hit.rigidbody, hit.point, hit.normal);

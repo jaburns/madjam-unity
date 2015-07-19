@@ -15,6 +15,7 @@ public class SpiderSnap : MonoBehaviour
     SurfaceCoords _curPos;
     SurfaceCoords _lastPos;
     bool _updateFlag;
+    SpiderController _controller;
 
     Vector2 _lastWorldPos;
     Vector2 _curWorldPos;
@@ -28,6 +29,7 @@ public class SpiderSnap : MonoBehaviour
     void Awake()
     {
         enabled = false;
+        _controller = GetComponent<SpiderController>();
     }
 
     void Update()
@@ -112,7 +114,7 @@ public class SpiderSnap : MonoBehaviour
 
         if (hit.point.VeryNear(p0)) return false;
 
-        if (hit.collider.gameObject.tag == "Slippy") {
+        if (hit.collider.gameObject.tag == "Slippy" && _controller.isNormalLetGoable(hit.normal)) {
             Unsnap();
             return true;
         }

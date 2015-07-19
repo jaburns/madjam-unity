@@ -13,7 +13,7 @@ public class MooseController : MonoBehaviour
     const float AIR_DECEL = 0.5f * MOVEMENT_SCALE;
 
     // Jumping
-    const float GRAVITY          =  2 * MOVEMENT_SCALE;
+    float GRAVITY          =  2 * MOVEMENT_SCALE;
     const float MAX_FALL         = 16 * MOVEMENT_SCALE;
     const float JUMP             = 16 * MOVEMENT_SCALE;
     const int   JUMP_FRAMES      =  8;
@@ -55,11 +55,22 @@ public class MooseController : MonoBehaviour
         endSnap();
     }
 
+    void Start()
+    {
+        GravitySetting.OnGravitySwitch += GravitySwitch;
+    }
+
     void Update()
     {
         var p0 = _oldPosition.AsVector3(transform.position.z);
         var p1 = _newPosition.AsVector3(transform.position.z);
         transform.position = Vector3.Lerp(p0, p1, (Time.time - Time.fixedTime) / Time.fixedDeltaTime);
+    }
+
+    void GravitySwitch()
+    {
+        GRAVITY *= -1;
+        endSnap();
     }
 
     void FixedUpdate()
@@ -226,8 +237,8 @@ public class MooseController : MonoBehaviour
     void handleJump()
     {
         _vel.y -= GRAVITY;
-        if (_vel.y < -MAX_FALL) {
-            _vel.y = -MAX_FALL;
+        if (Mathf.Abs(_vel.y) > MAX_FALL) {
+            _vel.y = (GRAVITY < 0) ? MAX_FALL : -MAX_FALL;
         }
     }
 }
