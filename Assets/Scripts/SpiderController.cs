@@ -6,11 +6,10 @@ public class SpiderController : MonoBehaviour
     const float MAX_FALL = 16 * MooseController.MOVEMENT_SCALE;
     const float SPEED    = 0.5f;
 
-    public Rigidbody2D DefaultGround;
-
     Vector2 _oldPosition;
     Vector2 _newPosition;
     float _vely;
+    int _fallCheckCountdown;
 
     SpiderSnap _snap;
     BlobBinder _blobBinder;
@@ -21,7 +20,6 @@ public class SpiderController : MonoBehaviour
         _oldPosition = _newPosition;
 
         _snap = GetComponent<SpiderSnap>();
-        _snap.SnapTo(DefaultGround, transform.position, Vector3.up);
         _blobBinder = GetComponentInChildren<BlobBinder>();
     }
 
@@ -45,6 +43,8 @@ public class SpiderController : MonoBehaviour
                 }
             }
             if (!_snap.enabled) {
+                _vely = 0;
+                _fallCheckCountdown = 10;
                 _oldPosition = _newPosition = transform.position.AsVector2();
             }
         } else {
@@ -53,6 +53,16 @@ public class SpiderController : MonoBehaviour
                 _vely = -MAX_FALL;
             }
             _newPosition = fall(_newPosition);
+
+            if (_fallCheckCountdown > 0) {
+                _fallCheckCountdown--;
+            } else {
+                var p = transform.position.AsVector2();
+                var hit = Physics2D.Linecast(p + Vector2.up, p);
+                if (hit.rigidbody) {
+                    _snap.SnapTo(hit.rigidbody, hit.point, hit.normal);
+                }
+            }
         }
     }
 
