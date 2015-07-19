@@ -20,8 +20,10 @@ public class SpiderSnap : MonoBehaviour
     Vector2 _curWorldPos;
     Vector2 _velocityEstimate;
 
+    Vector2 _lastNormal;
+
     public Vector2 VelocityEstimate { get { return _velocityEstimate; } }
-    public Vector2 Normal { get { return Vector2.right.Rotate(_curPos.normalDegrees); } }
+    public Vector2 Normal { get { return _lastNormal; } }
 
     void Awake()
     {
@@ -57,6 +59,7 @@ public class SpiderSnap : MonoBehaviour
         _target = target;
 
         _curPos = worldCoordsToSurfaceCoords(pos, normal);
+        _lastNormal = Vector2.right.Rotate(_curPos.normalDegrees);
         _lastPos = _curPos;
         _updateFlag = true;
     }
@@ -123,6 +126,7 @@ public class SpiderSnap : MonoBehaviour
         _lastPos = _curPos;
         _curPos = pos;
         _updateFlag = true;
+        _lastNormal = Vector2.right.Rotate(_curPos.normalDegrees);
     }
 
     Vector2 surfaceCoordsToWorldCoords(SurfaceCoords s)

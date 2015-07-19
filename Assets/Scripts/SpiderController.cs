@@ -52,8 +52,9 @@ public class SpiderController : MonoBehaviour
             }
             if (!_snap.enabled) {
                 _vely = 0;
-                _fallCheckCountdown = 10;
-                _oldPosition = _newPosition = transform.position.AsVector2();
+                _fallCheckCountdown = 2;
+                _oldPosition = transform.position.AsVector2();
+                _newPosition = _oldPosition + _snap.Normal * 0.2f;
             }
         } else {
             _vely -= GRAVITY;
@@ -65,9 +66,10 @@ public class SpiderController : MonoBehaviour
             if (_fallCheckCountdown > 0) {
                 _fallCheckCountdown--;
             } else {
-                var p = transform.position.AsVector2();
-                var hit = Physics2D.Linecast(p + Vector2.up, p);
-                if (hit.rigidbody) {
+                var p0 = transform.position.AsVector2() - (Vector2.up*_vely);
+                var p1 = transform.position.AsVector2();
+                var hit = Physics2D.Linecast(p0, p1);
+                if (hit.rigidbody && !isNormalLetGoable(hit.normal) && !p0.VeryNear(hit.point)) {
                     _snap.SnapTo(hit.rigidbody, hit.point, hit.normal);
                 }
             }
