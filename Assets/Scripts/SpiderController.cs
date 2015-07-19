@@ -4,7 +4,7 @@ public class SpiderController : MonoBehaviour
 {
     const float GRAVITY  =  2 * MooseController.MOVEMENT_SCALE;
     const float MAX_FALL = 16 * MooseController.MOVEMENT_SCALE;
-    const float SPEED    = 0.5f;
+    const float SPEED    = 0.3f;
 
     Vector2 _oldPosition;
     Vector2 _newPosition;
@@ -30,6 +30,11 @@ public class SpiderController : MonoBehaviour
         transform.position = Vector3.Lerp(p0, p1, (Time.time - Time.fixedTime) / Time.fixedDeltaTime);
     }
 
+    static bool isNormalLetGoable(Vector2 normal)
+    {
+        return normal.y < 0.5f;
+    }
+
     void FixedUpdate()
     {
         _oldPosition = _newPosition;
@@ -40,6 +45,9 @@ public class SpiderController : MonoBehaviour
                     _snap.MoveClockwise(SPEED);
                 } else if (Controls.IsDown(Controls.Instance.Left)) {
                     _snap.MoveClockwise(-SPEED);
+                }
+                if (isNormalLetGoable(_snap.Normal) && Controls.IsDown(Controls.Instance.Act)) {
+                    _snap.Unsnap();
                 }
             }
             if (!_snap.enabled) {
@@ -52,7 +60,7 @@ public class SpiderController : MonoBehaviour
             if (_vely < -MAX_FALL) {
                 _vely = -MAX_FALL;
             }
-            _newPosition = fall(_newPosition);
+            _newPosition.y += _vely;
 
             if (_fallCheckCountdown > 0) {
                 _fallCheckCountdown--;
@@ -64,10 +72,5 @@ public class SpiderController : MonoBehaviour
                 }
             }
         }
-    }
-
-    Vector2 fall(Vector2 pos)
-    {
-        return pos.WithY(pos.y + _vely);
     }
 }

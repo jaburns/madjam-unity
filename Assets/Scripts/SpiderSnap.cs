@@ -21,6 +21,7 @@ public class SpiderSnap : MonoBehaviour
     Vector2 _velocityEstimate;
 
     public Vector2 VelocityEstimate { get { return _velocityEstimate; } }
+    public Vector2 Normal { get { return Vector2.right.Rotate(_curPos.normalDegrees); } }
 
     void Awake()
     {

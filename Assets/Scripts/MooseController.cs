@@ -7,10 +7,10 @@ public class MooseController : MonoBehaviour
     //3.5227e-2f
 
     // Left/right movement
-    const float MAX_RUN   = 12 * MOVEMENT_SCALE;
-    const float RUN_DECEL = 4  * MOVEMENT_SCALE;
-    const float RUN_ACCEL = 1  * MOVEMENT_SCALE;
-    const float AIR_DECEL = 1  * MOVEMENT_SCALE;
+    const float MAX_RUN   = 4 * MOVEMENT_SCALE;
+    const float RUN_DECEL = 2 * MOVEMENT_SCALE;
+    const float RUN_ACCEL = 0.5f * MOVEMENT_SCALE;
+    const float AIR_DECEL = 0.5f * MOVEMENT_SCALE;
 
     // Jumping
     const float GRAVITY          =  2 * MOVEMENT_SCALE;
