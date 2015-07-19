@@ -7,4 +7,5 @@ public class Ground : MonoBehaviour
     public float JaggySize = 0.5f;
     public float StepSize = 1.5f;
     public bool FlipNormals;
+    public bool UseJaggies;
 }

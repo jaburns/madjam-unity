@@ -97,6 +97,7 @@ public class GroundEditor : Editor
         targ.StepSize = EditorGUILayout.FloatField("Step Size", targ.StepSize);
         targ.JaggySize = EditorGUILayout.FloatField("Jaggy Size", targ.JaggySize);
         targ.FlipNormals = EditorGUILayout.Toggle("Flip Normals", targ.FlipNormals);
+        targ.UseJaggies = EditorGUILayout.Toggle("Use Jaggies", targ.UseJaggies);
 
         if (GUILayout.Button("Generate")) {
             generate();
@@ -108,7 +109,7 @@ public class GroundEditor : Editor
         var poly = targ.gameObject.EnsureComponent<PolygonCollider2D>();
         poly.points = targ.Nodes.ToArray();
 
-        var vertices2D = getVertices();
+        var vertices2D = targ.UseJaggies ? getVertices() : targ.Nodes.ToArray();
 
         var tr = new Triangulator(vertices2D);
         int[] indices = tr.Triangulate();
