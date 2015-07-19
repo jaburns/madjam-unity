@@ -18,6 +18,9 @@ public class BlobController : MonoBehaviour
         }
         if (Controls.Instance.Swap == Controls.ControlState.Press) {
             bindTo(getClosestBinder());
+        }
+
+        if (Controls.Instance.Trick == Controls.ControlState.Press) {
             GravitySetting.SwitchGravity();
         }
     }

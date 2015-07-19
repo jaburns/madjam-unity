@@ -16,23 +16,26 @@ public class Controls : MonoBehaviour
     }
 
     public enum ControlState {
-        Up, Press, Hold, Release
+        Up, Press, Hold, Release, Trick
     }
 
     const KeyCode LEFT  = KeyCode.LeftArrow;
     const KeyCode RIGHT = KeyCode.RightArrow;
     const KeyCode ACT   = KeyCode.Space;
     const KeyCode SWAP  = KeyCode.LeftShift;
+    const KeyCode TRICK = KeyCode.Q;
 
     ControlState _left;
     ControlState _right;
     ControlState _act;
     ControlState _swap;
+    ControlState _trick;
 
     public ControlState Left  { get { return _left; } }
     public ControlState Right { get { return _right; } }
     public ControlState Act   { get { return _act; } }
     public ControlState Swap  { get { return _swap; } }
+    public ControlState Trick { get { return _trick; } }
 
     static public bool IsDown(ControlState state)
     {
@@ -50,8 +53,7 @@ public class Controls : MonoBehaviour
         updateStateFromSignal(ref _right, Input.GetKey(RIGHT));
         updateStateFromSignal(ref _act,   Input.GetKey(ACT  ));
         updateStateFromSignal(ref _swap,  Input.GetKey(SWAP ));
-
-        //Debug.Log(_swap);
+        updateStateFromSignal(ref _trick, Input.GetKey(TRICK));
     }
 
     static void updateStateFromSignal(ref ControlState state, bool signal)
@@ -70,5 +72,4 @@ public class Controls : MonoBehaviour
             }
         }
     }
-
 }
