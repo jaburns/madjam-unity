@@ -36,7 +36,9 @@ public class MooseController : MonoBehaviour
 
     int _cantSnapCounter;
     bool _faceRight = true;
-    float _idlePosition;
+
+    float _idleFenceLeft;
+    float _idleFenceRight;
     int _idleState;
 
     BlobBinder _blobBinder;
@@ -84,27 +86,21 @@ public class MooseController : MonoBehaviour
         bool pressingRight = false;
 
         if (_blobBinder.HasBlob) {
-            _idlePosition = 0;
             pressingLeft = Controls.IsDown(Controls.Instance.Left);
             pressingRight = Controls.IsDown(Controls.Instance.Right);
         }
 
         if (!pressingLeft && !pressingRight || !_blobBinder.HasBlob) {
-            if (Random.value > 0.8f) {
+            if (Random.value > 0.9f) {
                 _idleState = Mathf.FloorToInt(Random.value * 3) - 1;
             }
-            if (_idleState < 0) {
-                if (_idlePosition < -1) {
-                    _idleState = 0;
-                }
-                _idlePosition -= 0.02f;
+
+            if (_idleState < 0 && transform.position.x < _idleFenceLeft) {
+                _idleState = 1;
+            } else if (_idleState > 0 && transform.position.x > _idleFenceRight) {
+                _idleState = -1;
             }
-            else if (_idleState > 0) {
-                if (_idlePosition > 1) {
-                    _idleState = 0;
-                }
-                _idlePosition += 0.02f;
-            }
+
             pressingLeft = _idleState < 0;
             pressingRight = _idleState > 0;
         }
@@ -220,6 +216,8 @@ public class MooseController : MonoBehaviour
 
     void startSnap(Collider2D coll, Rigidbody2D rb, Vector2 pt, Vector2 normal)
     {
+        _idleFenceLeft = transform.position.x - 2.0f;
+        _idleFenceRight = transform.position.x + 2.0f;
         _snap.SnapTo(coll, rb, pt, normal, _vel);
     }
 
