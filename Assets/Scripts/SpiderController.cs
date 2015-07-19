@@ -66,8 +66,8 @@ public class SpiderController : MonoBehaviour
             if (_fallCheckCountdown > 0) {
                 _fallCheckCountdown--;
             } else {
-                var p0 = transform.position.AsVector2() - (Vector2.up*_vely);
-                var p1 = transform.position.AsVector2();
+                var p0 = transform.position.AsVector2();
+                var p1 = transform.position.AsVector2() + (Vector2.up*_vely);
                 var hit = Physics2D.Linecast(p0, p1);
                 if (hit.rigidbody && !isNormalLetGoable(hit.normal) && !p0.VeryNear(hit.point)) {
                     _snap.SnapTo(hit.rigidbody, hit.point, hit.normal);
