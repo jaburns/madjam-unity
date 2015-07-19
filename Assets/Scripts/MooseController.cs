@@ -36,6 +36,8 @@ public class MooseController : MonoBehaviour
 
     int _cantSnapCounter;
     bool _faceRight = true;
+    float _idlePosition;
+    int _idleState;
 
     BlobBinder _blobBinder;
 
@@ -82,8 +84,29 @@ public class MooseController : MonoBehaviour
         bool pressingRight = false;
 
         if (_blobBinder.HasBlob) {
+            _idlePosition = 0;
             pressingLeft = Controls.IsDown(Controls.Instance.Left);
             pressingRight = Controls.IsDown(Controls.Instance.Right);
+        }
+
+        if (!pressingLeft && !pressingRight || !_blobBinder.HasBlob) {
+            if (Random.value > 0.8f) {
+                _idleState = Mathf.FloorToInt(Random.value * 3) - 1;
+            }
+            if (_idleState < 0) {
+                if (_idlePosition < -1) {
+                    _idleState = 0;
+                }
+                _idlePosition -= 0.02f;
+            }
+            else if (_idleState > 0) {
+                if (_idlePosition > 1) {
+                    _idleState = 0;
+                }
+                _idlePosition += 0.02f;
+            }
+            pressingLeft = _idleState < 0;
+            pressingRight = _idleState > 0;
         }
 
         handleRun(pressingLeft, pressingRight);
