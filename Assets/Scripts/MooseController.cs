@@ -103,6 +103,9 @@ public class MooseController : MonoBehaviour
 
             pressingLeft = _idleState < 0;
             pressingRight = _idleState > 0;
+
+            Debug.DrawLine(new Vector3(_idleFenceLeft, 1000, 0), new Vector3(_idleFenceLeft, -1000, 0));
+            Debug.DrawLine(new Vector3(_idleFenceRight, 1000, 0), new Vector3(_idleFenceRight, -1000, 0));
         }
 
         handleRun(pressingLeft, pressingRight);
