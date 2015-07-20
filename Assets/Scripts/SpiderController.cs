@@ -27,6 +27,10 @@ public class SpiderController : MonoBehaviour
     {
         GravitySetting.OnGravitySwitch += GravitySwitch;
     }
+    void OnDestroy()
+    {
+        GravitySetting.OnGravitySwitch -= GravitySwitch;
+    }
 
     void GravitySwitch()
     {

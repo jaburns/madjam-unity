@@ -68,6 +68,10 @@ public class MooseController : MonoBehaviour
     {
         GravitySetting.OnGravitySwitch += GravitySwitch;
     }
+    void OnDestroy()
+    {
+        GravitySetting.OnGravitySwitch -= GravitySwitch;
+    }
 
     void Update()
     {
