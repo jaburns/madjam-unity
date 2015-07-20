@@ -3,6 +3,7 @@
 public class BirdController : MonoBehaviour
 {
     float GRAVITY = 2 * MooseController.MOVEMENT_SCALE;
+    const float MAX_FALL = 16 * MooseController.MOVEMENT_SCALE;
 
     Vector2 _newPosition;
     Vector2 _oldPosition;
@@ -40,7 +41,17 @@ public class BirdController : MonoBehaviour
     {
         _oldPosition = _newPosition;
 
-        _vel = new Vector2(0.01f, 0.01f * Mathf.Sign(GRAVITY));
+        bool pressingLeft = false;
+        bool pressingRight = false;
+        bool pressingAction = false;
+
+        if (_blobBinder.HasBlob) {
+            pressingLeft = Controls.IsDown(Controls.Instance.Left);
+            pressingRight = Controls.IsDown(Controls.Instance.Right);
+            pressingAction = Controls.IsDown(Controls.Instance.Act);
+        }
+
+        move(pressingLeft, pressingRight, pressingAction);
 
         freeMovement();
     }
@@ -50,6 +61,18 @@ public class BirdController : MonoBehaviour
         GRAVITY *= -1;
     }
 
+    void move(bool left, bool right, bool fly)
+    {
+        _vel.x = left ? -0.1f : right ? 0.1f : 0;
+        if (fly) {
+            _vel.y = 0.1f;
+        } else {
+            _vel.y -= GRAVITY;
+            if (Mathf.Abs(_vel.y) > MAX_FALL) {
+                _vel.y = (GRAVITY < 0) ? MAX_FALL : -MAX_FALL;
+            }
+        }
+    }
 
     static bool normalIsGround(Vector2 n) { return n.y >=  Mathf.Cos(Mathf.PI / 3); }
     static bool normalIsRoof(Vector2 n)   { return n.y <= -Mathf.Cos(Mathf.PI / 3); }
@@ -141,5 +164,4 @@ public class BirdController : MonoBehaviour
 
         return newPos;
     }
-
 }
