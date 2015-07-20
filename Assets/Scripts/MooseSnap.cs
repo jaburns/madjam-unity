@@ -213,6 +213,12 @@ public class MooseSnap : MonoBehaviour
         if (!result.HasValue) return null;
         if (normalCheck(result.Value.normal)) return null;
 
+        var smashable = result.Value.collider.GetComponent<Smashable>();
+        if (smashable) {
+            smashable.Smash();
+            return null;
+        }
+
         var targy = result.Value.collider.GetComponent<Rigidbody2D>();
         if (targy != null && !targy.isKinematic && result.Value.normal.x * forceX < 0) {
             pushed = true;
