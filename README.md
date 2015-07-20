@@ -18,7 +18,7 @@ To swap between animals, you must bring your currently possessed animal within r
 
 ## Animal Mechanics
 **Flying/flapping**
-* Possess a flying creature to flap around, avoiding obstacles and navigating tight spaces. 
+* Possess a flying creature to flap around, avoiding obstacles and navigating tight spaces.
 
 **Rushing/Charging**
 * Charge forward and smash through obstacles. Look out for pits and traps
@@ -35,9 +35,12 @@ To swap between animals, you must bring your currently possessed animal within r
 * Boulders/hard bricks (can only be smashed through)
 * Slippery walls (spider cant cling)
 
+## Azure Integration
+* Integrate with Windows Azure to have a persistant, cross-platform game save state so players can pick up and play from any device on any platform, right where they left off.
+
 ## Mobile Considerations
 * Tap the animal to swap instead of having a dedicated button for swapping
-* Left half of the screen is a reactive/responsive virtual d-pad. ie. it will register your initial tap as the 0,0 origin so you are disoriented. 
+* Left half of the screen is a reactive/responsive virtual d-pad. ie. it will register your initial tap as the 0,0 origin so you are disoriented.
 * Second (right) half of the screen would be a giant touch zone for your action button
 
 ## Animation
