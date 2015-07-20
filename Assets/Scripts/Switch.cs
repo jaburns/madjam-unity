@@ -14,7 +14,9 @@ public class Switch : MonoBehaviour
     void notifyTargets()
     {
 	    foreach (var target in Targets) {
-	        target.SendMessage("OnSwitch");
+	        if (target != null) {
+                target.SendMessage("OnSwitch");
+            }
         }
     }
 }
