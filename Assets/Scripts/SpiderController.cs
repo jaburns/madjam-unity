@@ -87,7 +87,7 @@ public class SpiderController : MonoBehaviour
             } else {
                 var p0 = transform.position.AsVector2();
                 var p1 = transform.position.AsVector2() + (Vector2.up*_vely*1.5f);
-                var hit = Physics2D.Linecast(p0, p1);
+                var hit = Physics2D.Linecast(p0, p1, MooseController.CollisionLayerMask);
                 if (hit.rigidbody && !isNormalLetGoable(hit.normal) && !p0.VeryNear(hit.point)) {
                     _snap.SnapTo(hit.rigidbody, hit.point, hit.normal);
                 }

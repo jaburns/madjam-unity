@@ -25,9 +25,7 @@ public class MooseController : MonoBehaviour
 
     static public int CollisionLayerMask { get {
         return ~(
-            1 << LayerMask.NameToLayer("TriggerObject") |
-            1 << LayerMask.NameToLayer("TriggerDetect") |
-            1 << LayerMask.NameToLayer("Rope")
+            1 << LayerMask.NameToLayer("Triggers")
         );
     } }
 

@@ -108,7 +108,7 @@ public class SpiderSnap : MonoBehaviour
 
     bool linecastAndSnap(Vector2 p0, Vector2 p1)
     {
-        var hits = Physics2D.LinecastAll(p0, p1).Where(h => h.rigidbody == _target).ToArray();
+        var hits = Physics2D.LinecastAll(p0, p1, MooseController.CollisionLayerMask).Where(h => h.rigidbody == _target).ToArray();
         if (!hits.Any()) return false;
         var hit = hits.FirstOrDefault();
 
