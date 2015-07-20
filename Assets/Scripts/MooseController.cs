@@ -21,6 +21,7 @@ public class MooseController : MonoBehaviour
 
     const int   STAMPEDE_LENGTH = 30;
     const float STAMPEDE_SPEED = 0.5f;
+    const int   WAIT_TO_GRAZE_AFTER_MOVING = 30;
 
     static public int CollisionLayerMask { get {
         return ~(
@@ -44,6 +45,7 @@ public class MooseController : MonoBehaviour
     float _idleFenceRight;
     int _idleState;
 
+    int _afterControlsCount;
     int _stampedeCount;
 
     BlobBinder _blobBinder;
@@ -93,24 +95,32 @@ public class MooseController : MonoBehaviour
         if (_blobBinder.HasBlob) {
             pressingLeft = Controls.IsDown(Controls.Instance.Left);
             pressingRight = Controls.IsDown(Controls.Instance.Right);
+
+            if (pressingLeft || pressingRight) {
+                _afterControlsCount = WAIT_TO_GRAZE_AFTER_MOVING;
+            }
         }
 
         if (!pressingLeft && !pressingRight || !_blobBinder.HasBlob) {
-            if (Random.value > 0.9f) {
-                _idleState = Mathf.FloorToInt(Random.value * 3) - 1;
+            if (_afterControlsCount > 0) {
+                _afterControlsCount--;
+            } else {
+                if (Random.value > 0.9f) {
+                    _idleState = Mathf.FloorToInt(Random.value * 3) - 1;
+                }
+
+                if (_idleState < 0 && transform.position.x < _idleFenceLeft) {
+                    _idleState = 1;
+                } else if (_idleState > 0 && transform.position.x > _idleFenceRight) {
+                    _idleState = -1;
+                }
+
+                pressingLeft = _idleState < 0;
+                pressingRight = _idleState > 0;
+
+                Debug.DrawLine(new Vector3(_idleFenceLeft, 1000, 0), new Vector3(_idleFenceLeft, -1000, 0));
+                Debug.DrawLine(new Vector3(_idleFenceRight, 1000, 0), new Vector3(_idleFenceRight, -1000, 0));
             }
-
-            if (_idleState < 0 && transform.position.x < _idleFenceLeft) {
-                _idleState = 1;
-            } else if (_idleState > 0 && transform.position.x > _idleFenceRight) {
-                _idleState = -1;
-            }
-
-            pressingLeft = _idleState < 0;
-            pressingRight = _idleState > 0;
-
-            Debug.DrawLine(new Vector3(_idleFenceLeft, 1000, 0), new Vector3(_idleFenceLeft, -1000, 0));
-            Debug.DrawLine(new Vector3(_idleFenceRight, 1000, 0), new Vector3(_idleFenceRight, -1000, 0));
         } else {
             _idleFenceLeft = transform.position.x - 2.0f;
             _idleFenceRight = transform.position.x + 2.0f;
