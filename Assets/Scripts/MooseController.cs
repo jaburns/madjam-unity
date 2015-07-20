@@ -19,6 +19,9 @@ public class MooseController : MonoBehaviour
     const int   JUMP_FRAMES      =  8;
     const float JUMP_END_GRAVITY =  3 * MOVEMENT_SCALE;
 
+    const int   STAMPEDE_LENGTH = 30;
+    const float STAMPEDE_SPEED = 0.5f;
+
     static public int CollisionLayerMask { get {
         return ~(
             1 << LayerMask.NameToLayer("TriggerObject") |
@@ -40,6 +43,8 @@ public class MooseController : MonoBehaviour
     float _idleFenceLeft;
     float _idleFenceRight;
     int _idleState;
+
+    int _stampedeCount;
 
     BlobBinder _blobBinder;
 
@@ -111,8 +116,20 @@ public class MooseController : MonoBehaviour
             _idleFenceRight = transform.position.x + 2.0f;
         }
 
-        handleRun(pressingLeft, pressingRight);
-        handleJump();
+        if (_stampedeCount == 0 && Controls.Instance.Act == Controls.ControlState.Press && _blobBinder.HasBlob) {
+            _stampedeCount = STAMPEDE_LENGTH;
+        }
+
+        if (_stampedeCount > 0) {
+            _stampedeCount--;
+            handleStampede();
+        } else {
+            handleRun(pressingLeft, pressingRight);
+        }
+
+        if (!_snap.enabled) {
+            handleVertMovement();
+        }
 
         if (_snap.enabled) {
             var updateResult = _snap.UpdatePosition(_vel.x, normalIsGround);
@@ -230,9 +247,8 @@ public class MooseController : MonoBehaviour
     void endSnap()
     {
         _snap.Unsnap();
-        _vel.y = 0;
         _cantSnapCounter = 2;
-        //_vel = _snap.VelocityEstimate;
+        _vel.y = _snap.VelocityEstimate.y;
         _oldPosition = transform.position.AsVector2();
         _newPosition = _oldPosition;
     }
@@ -248,8 +264,7 @@ public class MooseController : MonoBehaviour
             _vel.x += _vel.x < 0 ? RUN_DECEL : RUN_ACCEL;
             if (_vel.x > MAX_RUN) _vel.x = MAX_RUN;
             _faceRight = true;
-        }
-        else {
+        } else {
             var decel = _snap.enabled ? RUN_DECEL : AIR_DECEL;
             if (_vel.x > decel) {
                 _vel.x -= decel;
@@ -261,7 +276,12 @@ public class MooseController : MonoBehaviour
         }
     }
 
-    void handleJump()
+    void handleStampede()
+    {
+        _vel.x = _faceRight ? STAMPEDE_SPEED : -STAMPEDE_SPEED;
+    }
+
+    void handleVertMovement()
     {
         _vel.y -= GRAVITY;
         if (Mathf.Abs(_vel.y) > MAX_FALL) {
