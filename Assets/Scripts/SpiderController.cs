@@ -18,6 +18,7 @@ public class SpiderController : MonoBehaviour
     {
         _newPosition = transform.position.AsVector2();
         _oldPosition = _newPosition;
+        _vely = 5*GRAVITY;
 
         _snap = GetComponent<SpiderSnap>();
         _blobBinder = GetComponentInChildren<BlobBinder>();

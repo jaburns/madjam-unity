@@ -25,10 +25,10 @@ public class GroundEditor : Editor
             _hasDeleted = false;
         }
 
+        drawGrid();
+
         Handles.color = Color.white;
         Handles.DrawLine(targ.transform.position + targ.Nodes[targ.Nodes.Count-1].AsVector3(), targ.transform.position + targ.Nodes[0].AsVector3());
-
-        drawGrid();
 
         int? actionIndex = null;
         Vector2 actionPos = Vector2.zero;
