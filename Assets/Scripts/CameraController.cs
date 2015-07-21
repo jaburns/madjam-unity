@@ -9,17 +9,16 @@ public class CameraController : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-    }
 
-    //void LateUpdate ()
-    //{
-    //    var newPosition = Target.transform.position.WithZ(transform.position.z);
-    //    transform.position += (newPosition - transform.position) / 10;
-    //}
+        if (Target == null) {
+            Target = GameObject.Find("Blob").transform;
+        }
+    }
 
     void FixedUpdate()
     {
-        // SmoothDamp
+        // TODO look up SmoothDamp for cam movements
+        //
         var newPosition = Target.transform.position.WithZ(transform.position.z);
         var targPos = _rb.position + (newPosition.AsVector2() - _rb.position) / 10;
         _rb.MovePosition(targPos);
