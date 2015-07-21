@@ -8,9 +8,11 @@ public class BirdController : MonoBehaviour
     Vector2 _newPosition;
     Vector2 _oldPosition;
     Vector2 _vel;
+    bool _faceRight = true;
 
     BlobBinder _blobBinder;
     MooseDimensions _heroDim;
+    Animator _anim;
 
     void Awake()
     {
@@ -19,6 +21,7 @@ public class BirdController : MonoBehaviour
 
         _heroDim = GetComponent<MooseDimensions>();
         _blobBinder = GetComponentInChildren<BlobBinder>();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     void Start()
@@ -64,6 +67,11 @@ public class BirdController : MonoBehaviour
     void move(bool left, bool right, bool fly)
     {
         _vel.x = left ? -0.1f : right ? 0.1f : 0;
+
+        if (left) _faceRight = false;
+        if (right) _faceRight = true;
+        _anim.transform.localScale = _anim.transform.localScale.WithY(_faceRight ? 1 : -1);
+
         if (fly) {
             _vel.y = 0.1f;
         } else {
@@ -91,7 +99,7 @@ public class BirdController : MonoBehaviour
     {
         var test = vertTestAtOffset(newPos, 0);
         if (test.HasValue) return test.Value;
-       return newPos;
+        return newPos;
     }
 
     Vector2? vertTestAtOffset(Vector2 newPos, float offsetScale)
