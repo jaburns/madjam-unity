@@ -91,11 +91,7 @@ public class BirdController : MonoBehaviour
     {
         var test = vertTestAtOffset(newPos, 0);
         if (test.HasValue) return test.Value;
-        test = vertTestAtOffset(newPos, 1);
-        if (test.HasValue) return test.Value;
-        test = vertTestAtOffset(newPos, -1);
-        if (test.HasValue) return test.Value;
-        return newPos;
+       return newPos;
     }
 
     Vector2? vertTestAtOffset(Vector2 newPos, float offsetScale)
@@ -116,9 +112,6 @@ public class BirdController : MonoBehaviour
         if (normalIsGround(hit.normal)) {
             _vel.y = 0;
             newPos.y = hit.point.y;
-            //if (_cantSnapCounter == 0) {
-            //    startSnap(hit.collider, hit.rigidbody, newPos - offset, hit.normal);
-            //}
         } else if (normalIsRoof(hit.normal)) {
             if (_vel.y > 0) {
                 _vel.y = 0;
