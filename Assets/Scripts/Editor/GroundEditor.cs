@@ -28,6 +28,8 @@ public class GroundEditor : Editor
         Handles.color = Color.white;
         Handles.DrawLine(targ.transform.position + targ.Nodes[targ.Nodes.Count-1].AsVector3(), targ.transform.position + targ.Nodes[0].AsVector3());
 
+        drawGrid();
+
         int? actionIndex = null;
         Vector2 actionPos = Vector2.zero;
 
@@ -63,6 +65,23 @@ public class GroundEditor : Editor
             }
             _actionRequest = NodeAction.Nothing;
             // generate();
+        }
+    }
+
+    void drawGrid()
+    {
+        Handles.color = Color.grey;
+        for (float ix = -1000; ix < 1000; ix += 0.5f) {
+            Handles.DrawLine(
+                new Vector3(ix, -1000, 0),
+                new Vector3(ix,  1000, 0)
+            );
+        }
+        for (float iy = -1000; iy < 1000; iy += 0.5f) {
+            Handles.DrawLine(
+                new Vector3(-1000, iy, 0),
+                new Vector3( 1000, iy, 0)
+            );
         }
     }
 
@@ -104,8 +123,27 @@ public class GroundEditor : Editor
         }
     }
 
+    void snapNodesToGrid()
+    {
+        targ.transform.position = new Vector3(
+            Mathf.Round(targ.transform.position.x / 0.5f) * 0.5f,
+            Mathf.Round(targ.transform.position.y / 0.5f) * 0.5f,
+            targ.transform.position.z
+        );
+
+        var nodes = targ.Nodes;
+        for (int i = 0; i < nodes.Count; ++i) {
+            nodes[i] = new Vector2(
+                Mathf.Round(nodes[i].x / 0.5f) * 0.5f,
+                Mathf.Round(nodes[i].y / 0.5f) * 0.5f
+            );
+        }
+    }
+
     void generate()
     {
+        snapNodesToGrid();
+
         var poly = targ.gameObject.EnsureComponent<PolygonCollider2D>();
         poly.points = targ.Nodes.ToArray();
 
