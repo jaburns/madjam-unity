@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class BirdyController : MonoBehaviour {
+public class BirdyController : MonoBehaviour
+{
+    BlobBinder _blobBinder;
+    Rigidbody2D _rb;
 
-	// Use this for initialization
-	void Start () {
-	
+	void Awake ()
+	{
+	    _blobBinder = GetComponentInChildren<BlobBinder>();
+	    _rb = GetComponent<Rigidbody2D>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+	void FixedUpdate()
+    {
+        if (_blobBinder.HasBlob) {
+            _rb.AddForce(Vector2.right * 10);
+        }
+    }
 }
