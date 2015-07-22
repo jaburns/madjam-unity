@@ -85,6 +85,8 @@ public class MooseSnap : MonoBehaviour
         _target = target;
         _targetBody = rb;
 
+        _target.gameObject.SendMessage("WalkOn", null, SendMessageOptions.DontRequireReceiver);
+
         _velocityEstimate = initialVelEstimate;
         _curPos = worldCoordsToSurfaceCoords(pos, normal);
         _curWorldPos = pos;
@@ -97,6 +99,8 @@ public class MooseSnap : MonoBehaviour
     public void Unsnap()
     {
         if (_target == null) return;
+
+        _target.gameObject.SendMessage("WalkOff", null, SendMessageOptions.DontRequireReceiver);
 
         transform.position = surfaceCoordsToWorldCoords(_curPos);
         enabled = false;
