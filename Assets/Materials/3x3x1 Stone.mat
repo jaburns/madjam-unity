@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: 2x2x1 Stone
+  m_Name: 3x3x1 Stone
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -18,14 +18,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: b645810a2ed83004a8de7ead9320730c, type: 3}
+          m_Texture: {fileID: 2800000, guid: 0f88f5d4fd74589489c065ca09747f02, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 1f7bdd51a27f6fa4192439627e5e0488, type: 3}
+          m_Texture: {fileID: 2800000, guid: 39c71bbab185359458be5854871da5fa, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -74,14 +74,14 @@ Material:
         first:
           name: _MetallicGlossMap
         second:
-          m_Texture: {fileID: 2800000, guid: d1292828e95d56a478f3137006fd31df, type: 3}
+          m_Texture: {fileID: 2800000, guid: f89e23e1d9bea8146a7a28692f6d5efb, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _SpecGlossMap
         second:
-          m_Texture: {fileID: 2800000, guid: 7c9d04d098e347f42a93f133371d66d1, type: 3}
+          m_Texture: {fileID: 2800000, guid: a12601d2f2dbd5e46bb8b036544db3de, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
