@@ -13,11 +13,8 @@ public class MooseController : MonoBehaviour
     const float AIR_DECEL = 0.5f * MOVEMENT_SCALE;
 
     // Jumping
-    float GRAVITY          =  2 * MOVEMENT_SCALE;
-    const float MAX_FALL         = 16 * MOVEMENT_SCALE;
-    const float JUMP             = 16 * MOVEMENT_SCALE;
-    const int   JUMP_FRAMES      =  8;
-    const float JUMP_END_GRAVITY =  3 * MOVEMENT_SCALE;
+    float GRAVITY        =  2 * MOVEMENT_SCALE;
+    const float MAX_FALL = 16 * MOVEMENT_SCALE;
 
     const int   STAMPEDE_LENGTH = 30;
     const float STAMPEDE_SPEED = 0.5f;
@@ -51,6 +48,7 @@ public class MooseController : MonoBehaviour
     public Vector2 Position { get { return _snap.enabled ? _snap.Position : _newPosition; } }
     public Vector2 Velocity { get { return _snap.enabled ? _snap.VelocityEstimate : _vel; } }
     public bool FaceRight { get { return _faceRight; } }
+    public bool Charging { get { return _stampedeCount > 0; } }
 
     void Awake()
     {

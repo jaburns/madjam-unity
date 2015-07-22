@@ -36,6 +36,7 @@ public class MooseSnap : MonoBehaviour
     bool _updateFlag;
     bool _justSnapped;
     MooseDimensions _heroDim;
+    MooseController _mooseController;
 
     Vector2 _lastWorldPos;
     Vector2 _curWorldPos;
@@ -48,6 +49,7 @@ public class MooseSnap : MonoBehaviour
     {
         enabled = false;
         _heroDim = GetComponent<MooseDimensions>();
+        _mooseController = GetComponent<MooseController>();
     }
 
     void Update()
@@ -213,10 +215,12 @@ public class MooseSnap : MonoBehaviour
         if (!result.HasValue) return null;
         if (normalCheck(result.Value.normal)) return null;
 
-        var smashable = result.Value.collider.GetComponent<Smashable>();
-        if (smashable) {
-            smashable.Smash();
-            return null;
+        if (_mooseController.Charging) {
+            var smashable = result.Value.collider.GetComponent<Smashable>();
+            if (smashable) {
+                smashable.Smash();
+                return null;
+            }
         }
 
         var targy = result.Value.collider.GetComponent<Rigidbody2D>();
