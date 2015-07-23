@@ -269,6 +269,7 @@ public class MooseController : MonoBehaviour
         _vel.y = _snap.VelocityEstimate.y;
         _oldPosition = transform.position.AsVector2();
         _newPosition = _oldPosition;
+        _snap.enabled = false;
     }
 
     void handleRun(bool left, bool right)

@@ -25,6 +25,8 @@ public class MooseSnap : MonoBehaviour
         public Vector2 normal;
     }
 
+    public string dbg;
+
     public float PushForce;
     public bool FixVX;
 
@@ -70,6 +72,8 @@ public class MooseSnap : MonoBehaviour
     void FixedUpdate()
     {
         _justSnapped = false;
+
+        dbg = _targetBody.name;
 
         _curWorldPos = surfaceCoordsToWorldCoords(_curPos);
         _velocityEstimate = _curWorldPos - _lastWorldPos;
@@ -117,11 +121,13 @@ public class MooseSnap : MonoBehaviour
 
     public UpdateResult UpdatePosition(float vx, Func<Vector2, bool> normalCheck)
     {
-        if (_target == null) return new UpdateResult {
-            stillStanding = false,
-            wallCollision = 0,
-            solidWallCollision = false
-        };
+        if (_target == null) {
+            return new UpdateResult {
+                stillStanding = false,
+                wallCollision = 0,
+                solidWallCollision = false
+            };
+        }
 
         if (GravitySetting.Reverse) vx *= -1;
 
