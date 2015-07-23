@@ -6,12 +6,14 @@ public class BirdyController : MonoBehaviour
     const float MAX_Y = 10;
 
     BlobBinder _blobBinder;
+    Animator _anim;
     Rigidbody2D _rb;
     GameObject _floor;
 
     void Awake ()
     {
         _blobBinder = GetComponentInChildren<BlobBinder>();
+        _anim = GetComponentInChildren<Animator>();
         _rb = GetComponent<Rigidbody2D>();
     }
 
@@ -36,6 +38,8 @@ public class BirdyController : MonoBehaviour
         if (_floor) {
             _floor.SendMessage("StayOn", null, SendMessageOptions.DontRequireReceiver);
         }
+
+        _anim.SetBool("flying", _floor != null);
 
         if (_blobBinder.HasBlob) {
             if (Controls.Instance.Act == Controls.ControlState.Press) {

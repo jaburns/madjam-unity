@@ -123,6 +123,8 @@ ModelImporter:
     7400000: Default Take
     7400002: Idle
     7400004: Idle
+    7400006: Hop
+    7400008: Flap
     9500000: //RootNode
     13700000: Birdbug
   materials:
@@ -178,6 +180,282 @@ ModelImporter:
       takeName: ArmatureAction
       firstFrame: 0
       lastFrame: 115
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_head
+        weight: 1
+      - path: Armature/ROOT/IK_wing_L
+        weight: 1
+      - path: Armature/ROOT/IK_wing_R
+        weight: 1
+      - path: Armature/ROOT/POLE_wing_L
+        weight: 1
+      - path: Armature/ROOT/POLE_wing_R
+        weight: 1
+      - path: Armature/ROOT/TARGET_head_lookat
+        weight: 1
+      - path: Armature/spine5
+        weight: 1
+      - path: Armature/spine5/spine4
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_L/leggy1_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_R/leggy1_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_L/leggy2_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_R/leggy2_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_L/leggy3_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_R/leggy3_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_L/leggy4_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_R/leggy4_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_L/leggy5_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_R/leggy5_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/fluff1
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/fluff2
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_L/antennae2_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_L/antennae2_L/antennae3_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_R/antennae2_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_R/antennae2_R/antennae3_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill1_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill1_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill2_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill2_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_L/wing2_tip_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_R/wing2_tip_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing_L/wing_tip_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing_R/wing_tip_R
+        weight: 1
+      - path: Birdbug
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Hop
+      takeName: Default Take
+      firstFrame: 118
+      lastFrame: 134
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_head
+        weight: 1
+      - path: Armature/ROOT/IK_wing_L
+        weight: 1
+      - path: Armature/ROOT/IK_wing_R
+        weight: 1
+      - path: Armature/ROOT/POLE_wing_L
+        weight: 1
+      - path: Armature/ROOT/POLE_wing_R
+        weight: 1
+      - path: Armature/ROOT/TARGET_head_lookat
+        weight: 1
+      - path: Armature/spine5
+        weight: 1
+      - path: Armature/spine5/spine4
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_L/leggy1_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy1_1_R/leggy1_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_L/leggy2_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy2_1_R/leggy2_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_L/leggy3_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy3_1_R/leggy3_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_L/leggy4_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy4_1_R/leggy4_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_L/leggy5_2_L
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_R
+        weight: 1
+      - path: Armature/spine5/spine4/leggy5_1_R/leggy5_2_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/fluff1
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/fluff2
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_L/antennae2_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_L/antennae2_L/antennae3_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_R/antennae2_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/antennae1_R/antennae2_R/antennae3_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill1_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill1_R
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill2_L
+        weight: 1
+      - path: Armature/spine5/spine4/spine3/spine2/spine1/head/head_frill2_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_L/wing2_tip_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing2_R/wing2_tip_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing_L/wing_tip_L
+        weight: 1
+      - path: Armature/spine5/spine4/wing_R
+        weight: 1
+      - path: Armature/spine5/spine4/wing_R/wing_tip_R
+        weight: 1
+      - path: Birdbug
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Flap
+      takeName: Default Take
+      firstFrame: 138
+      lastFrame: 158
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
