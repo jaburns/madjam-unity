@@ -2,12 +2,16 @@
 
 public class Switch : MonoBehaviour
 {
+    public bool Heavy;
     public bool TargetIsGravity;
     public GameObject[] Targets;
 
-	void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.name == "BlobTrigger") {
+        var sh = col.GetComponent<SwitchHitter>();
+        if (sh == null) return;
+
+        if (Heavy == sh.Heavy) {
             if (TargetIsGravity) {
                 GravitySetting.SwitchGravity();
             } else {
@@ -17,6 +21,7 @@ public class Switch : MonoBehaviour
                     }
                 }
             }
+            Destroy(gameObject);
         }
     }
 }

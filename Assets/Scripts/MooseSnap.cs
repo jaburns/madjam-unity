@@ -62,6 +62,9 @@ public class MooseSnap : MonoBehaviour
         var p1 = surfaceCoordsToWorldCoords(_curPos);
 
         transform.position = p0 + (p1 - p0) * dt;
+        if (GravitySetting.Reverse) {
+            transform.position -= Vector3.up * _heroDim.Height;
+        }
     }
 
     void FixedUpdate()
@@ -82,7 +85,7 @@ public class MooseSnap : MonoBehaviour
 
     public void SnapTo(Collider2D target, Rigidbody2D rb, Vector2 pos, Vector2 normal, Vector2 initialVelEstimate)
     {
-        if (_target != null) Unsnap();
+        if (_target != null) Unsnap(false);
 
         enabled = true;
 
@@ -98,11 +101,15 @@ public class MooseSnap : MonoBehaviour
         _justSnapped = true;
     }
 
-    public void Unsnap()
+    public void Unsnap(bool fromGrav)
     {
         if (_target == null) return;
 
         transform.position = surfaceCoordsToWorldCoords(_curPos);
+        if (fromGrav != GravitySetting.Reverse) {
+            transform.position -= Vector3.up * _heroDim.Height;
+        }
+
         enabled = false;
         _target = null;
         _targetBody = null;
@@ -115,6 +122,8 @@ public class MooseSnap : MonoBehaviour
             wallCollision = 0,
             solidWallCollision = false
         };
+
+        if (GravitySetting.Reverse) vx *= -1;
 
         return doUpdatePosition(vx, normalCheck, 0, false, true);
     }
@@ -143,7 +152,7 @@ public class MooseSnap : MonoBehaviour
         var newPos = pos + moveVec;
 
         if (checkWalls) {
-            var newMiddle = newPos + Vector2.up * _heroDim.HalfHeight;
+            var newMiddle = newPos + (GravitySetting.Reverse ? -1 : 1) * Vector2.up * _heroDim.HalfHeight;
             var wallTestL = newMiddle - (tangent * _heroDim.HalfWidth) / tangent.x;
             var wallTestR = newMiddle + (tangent * _heroDim.HalfWidth) / tangent.x;
 
@@ -154,6 +163,7 @@ public class MooseSnap : MonoBehaviour
 
             if (penetration.HasValue) {
                 var depth = penetration.Value;
+                if (GravitySetting.Reverse) depth *= -1;
                 var colVal = 0;
                 if (!pushed) colVal = depth > 0 ? 1 : -1;
                 return doUpdatePosition(vx - depth, normalCheck, colVal, !pushed, false);

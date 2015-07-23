@@ -57,7 +57,7 @@ public class MooseController : MonoBehaviour
         _heroDim = GetComponent<MooseDimensions>();
         _blobBinder = GetComponentInChildren<BlobBinder>();
 
-        endSnap();
+        endSnap(false);
     }
 
     void Start()
@@ -79,7 +79,7 @@ public class MooseController : MonoBehaviour
     void GravitySwitch()
     {
         GRAVITY *= -1;
-        endSnap();
+        endSnap(true);
     }
 
     void FixedUpdate()
@@ -140,13 +140,13 @@ public class MooseController : MonoBehaviour
         }
 
         if (_snap.enabled) {
-            var updateResult = _snap.UpdatePosition(_vel.x, normalIsGround);
+            var updateResult = _snap.UpdatePosition(_vel.x, normalIsGroundGravDependent);
 
             if (updateResult.solidWallCollision) {
                 _vel.x = 0;
             }
             if (!updateResult.stillStanding) {
-                endSnap();
+                endSnap(false);
                 freeMovement();
             }
         } else {
@@ -157,6 +157,8 @@ public class MooseController : MonoBehaviour
     static bool normalIsGround(Vector2 n) { return n.y >=  Mathf.Cos(Mathf.PI / 3); }
     static bool normalIsRoof(Vector2 n)   { return n.y <= -Mathf.Cos(Mathf.PI / 3); }
     static bool normalIsWall(Vector2 n)   { return !normalIsGround(n) && !normalIsRoof(n); }
+
+    static bool normalIsGroundGravDependent(Vector2 n) { return GravitySetting.Reverse ? n.y <= -Mathf.Cos(Mathf.PI / 3) : n.y >=  Mathf.Cos(Mathf.PI / 3); }
 
     void freeMovement()
     {
@@ -196,19 +198,21 @@ public class MooseController : MonoBehaviour
         if (normalIsGround(hit.normal)) {
             _vel.y = 0;
             newPos.y = hit.point.y;
-            if (_cantSnapCounter == 0) {
-                startSnap(hit.collider, hit.rigidbody, newPos - offset, hit.normal);
+            if (!GravitySetting.Reverse) {
+                if (_cantSnapCounter == 0) {
+                    startSnap(hit.collider, hit.rigidbody, newPos - offset, hit.normal);
+                }
             }
         } else if (normalIsRoof(hit.normal)) {
             if (_vel.y > 0) {
                 _vel.y = 0;
             }
             newPos.y = (hit.point - Vector2.up * _heroDim.Height).y;
-
-            var hitBody = hit.collider.GetComponent<Rigidbody2D>();
-            if (hitBody && hitBody.velocity.y < 0) {
-                _vel.y = hitBody.velocity.y * Time.fixedDeltaTime;
-                newPos.y += _vel.y;
+            if (GravitySetting.Reverse) {
+                if (_cantSnapCounter == 0) {
+                    newPos.y = hit.point.y;
+                    startSnap(hit.collider, hit.rigidbody, newPos - offset, hit.normal);
+                }
             }
         }
 
@@ -253,9 +257,9 @@ public class MooseController : MonoBehaviour
         _snap.SnapTo(coll, rb, pt, normal, _vel);
     }
 
-    void endSnap()
+    void endSnap(bool fromGrav)
     {
-        _snap.Unsnap();
+        _snap.Unsnap(fromGrav);
         _cantSnapCounter = 2;
         _vel.y = _snap.VelocityEstimate.y;
         _oldPosition = transform.position.AsVector2();
