@@ -51,6 +51,8 @@ public class SpiderSnap : MonoBehaviour
 
         if (_updateFlag) _updateFlag = false;
         else _lastPos = _curPos;
+
+        transform.localRotation = Quaternion.Euler(0, 0, _curPos.normalDegrees - 90);
     }
 
     public void SnapTo(Rigidbody2D target, Vector2 pos, Vector2 normal)
