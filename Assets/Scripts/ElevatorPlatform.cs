@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ElevatorPlatform : MonoBehaviour
 {
@@ -17,13 +16,25 @@ public class ElevatorPlatform : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_on) {
-            if (_rb.position.y < MaxY) {
-                _rb.MovePosition(_rb.position.WithY(_rb.position.y + 0.1f));
-            } else {
-                _rb.MovePosition(_origin.WithY(MaxY));
-            }
-        } else if (_rb.position.y > _origin.y) {
+        if (_on == GravitySetting.Reverse) {
+            seekMin();
+        } else {
+            seekMax();
+        }
+    }
+
+    void seekMax()
+    {
+        if (_rb.position.y < MaxY) {
+            _rb.MovePosition(_rb.position.WithY(_rb.position.y + 0.1f));
+        } else {
+            _rb.MovePosition(_origin.WithY(MaxY));
+        }
+    }
+
+    void seekMin()
+    {
+        if (_rb.position.y > _origin.y) {
             _rb.MovePosition(_rb.position.WithY(_rb.position.y - 0.1f));
         } else {
             _rb.MovePosition(_origin);
