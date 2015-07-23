@@ -26,6 +26,7 @@ public class MooseController : MonoBehaviour
 
     MooseDimensions _heroDim;
     MooseSnap _snap;
+    Animator _anim;
 
     Vector2 _newPosition;
     Vector2 _oldPosition;
@@ -56,6 +57,7 @@ public class MooseController : MonoBehaviour
         _snap = GetComponent<MooseSnap>();
         _heroDim = GetComponent<MooseDimensions>();
         _blobBinder = GetComponentInChildren<BlobBinder>();
+        _anim = GetComponentInChildren<Animator>();
 
         endSnap(false);
     }
@@ -123,6 +125,9 @@ public class MooseController : MonoBehaviour
             _idleFenceLeft = transform.position.x - 2.0f;
             _idleFenceRight = transform.position.x + 2.0f;
         }
+
+        var t = _anim.gameObject.transform;
+        t.localScale = t.localScale.WithZ(Mathf.Abs(t.localScale.z) * (_faceRight ? 1 : -1));
 
         if (_stampedeCount == 0 && Controls.Instance.Act == Controls.ControlState.Press && _blobBinder.HasBlob) {
             _stampedeCount = STAMPEDE_LENGTH;
