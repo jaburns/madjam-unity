@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: ebd07daaff2be4d4a909a718c55a994f
+timeCreated: 1437626404
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: head
+    100004: head_jaw
+    100006: hip_L
+    100008: hip_R
+    100010: IK_spine_end
+    100012: IK_spine_fore
+    100014: leg_fore_lower_L
+    100016: leg_fore_lower_R
+    100018: leg_fore_toe_L
+    100020: leg_fore_toe_R
+    100022: leg_fore_upper_L
+    100024: leg_fore_upper_R
+    100026: leg_hind_lower_L
+    100028: leg_hind_lower_R
+    100030: leg_hind_toe_L
+    100032: leg_hind_toe_R
+    100034: leg_hind_upper_L
+    100036: leg_hind_upper_R
+    100038: leg_mid_lower_L
+    100040: leg_mid_lower_R
+    100042: leg_mid_toe_L
+    100044: leg_mid_toe_R
+    100046: leg_mid_upper_L
+    100048: leg_mid_upper_R
+    100050: mane1_1
+    100052: mane1_2
+    100054: mane2_1
+    100056: mane2_2
+    100058: mane2_root
+    100060: mane3_1
+    100062: mane3_2
+    100064: mane3_root
+    100066: Moose
+    100068: Moose_001
+    100070: Moose_002
+    100072: plates1_1
+    100074: plates2_1
+    100076: plates3_1
+    100078: plates4_1
+    100080: POLE_leg_fore_L
+    100082: POLE_leg_fore_R
+    100084: POLE_leg_hind_L
+    100086: POLE_leg_hind_R
+    100088: POLE_leg_mid_L
+    100090: POLE_leg_mid_R
+    100092: RIG_body
+    100094: ROOT
+    100096: shoulder_fore_L
+    100098: shoulder_fore_R
+    100100: shoulder_mid_L
+    100102: shoulder_mid_R
+    100104: spine1
+    100106: spine2
+    100108: spine3
+    100110: spine4
+    100112: spine5
+    100114: spine6
+    100116: spine7
+    100118: tail1
+    100120: tail2
+    100122: tail3
+    100124: tail4
+    400000: //RootNode
+    400002: head
+    400004: head_jaw
+    400006: hip_L
+    400008: hip_R
+    400010: IK_spine_end
+    400012: IK_spine_fore
+    400014: leg_fore_lower_L
+    400016: leg_fore_lower_R
+    400018: leg_fore_toe_L
+    400020: leg_fore_toe_R
+    400022: leg_fore_upper_L
+    400024: leg_fore_upper_R
+    400026: leg_hind_lower_L
+    400028: leg_hind_lower_R
+    400030: leg_hind_toe_L
+    400032: leg_hind_toe_R
+    400034: leg_hind_upper_L
+    400036: leg_hind_upper_R
+    400038: leg_mid_lower_L
+    400040: leg_mid_lower_R
+    400042: leg_mid_toe_L
+    400044: leg_mid_toe_R
+    400046: leg_mid_upper_L
+    400048: leg_mid_upper_R
+    400050: mane1_1
+    400052: mane1_2
+    400054: mane2_1
+    400056: mane2_2
+    400058: mane2_root
+    400060: mane3_1
+    400062: mane3_2
+    400064: mane3_root
+    400066: Moose
+    400068: Moose_001
+    400070: Moose_002
+    400072: plates1_1
+    400074: plates2_1
+    400076: plates3_1
+    400078: plates4_1
+    400080: POLE_leg_fore_L
+    400082: POLE_leg_fore_R
+    400084: POLE_leg_hind_L
+    400086: POLE_leg_hind_R
+    400088: POLE_leg_mid_L
+    400090: POLE_leg_mid_R
+    400092: RIG_body
+    400094: ROOT
+    400096: shoulder_fore_L
+    400098: shoulder_fore_R
+    400100: shoulder_mid_L
+    400102: shoulder_mid_R
+    400104: spine1
+    400106: spine2
+    400108: spine3
+    400110: spine4
+    400112: spine5
+    400114: spine6
+    400116: spine7
+    400118: tail1
+    400120: tail2
+    400122: tail3
+    400124: tail4
+    4300000: Moose_002
+    4300002: Moose_001
+    4300004: Moose
+    7400000: Default Take
+    7400002: Idle
+    7400004: RIG_bodyAction
+    9500000: //RootNode
+    13700000: Moose
+    13700002: Moose_001
+    13700004: Moose_002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 131
+      lastFrame: 161
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Moose
+        weight: 1
+      - path: Moose_001
+        weight: 1
+      - path: Moose_002
+        weight: 1
+      - path: RIG_body
+        weight: 1
+      - path: RIG_body/ROOT
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L/leg_hind_upper_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L/leg_hind_upper_L/leg_hind_lower_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L/leg_hind_upper_L/leg_hind_lower_L/leg_hind_toe_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R/leg_hind_upper_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R/leg_hind_upper_R/leg_hind_lower_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R/leg_hind_upper_R/leg_hind_lower_R/leg_hind_toe_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L/leg_mid_upper_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L/leg_mid_upper_L/leg_mid_lower_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L/leg_mid_upper_L/leg_mid_lower_L/leg_mid_toe_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R/leg_mid_upper_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R/leg_mid_upper_R/leg_mid_lower_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R/leg_mid_upper_R/leg_mid_lower_R/leg_mid_toe_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L/leg_fore_upper_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_toe_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R/leg_fore_upper_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_toe_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/mane3_root
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/mane3_root/mane3_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/mane3_root/mane3_1/mane3_2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/mane2_root
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/mane2_root/mane2_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/mane2_root/mane2_1/mane2_2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/mane1_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/mane1_1/mane1_2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1/tail2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1/tail2/tail3
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates1_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates2_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates3_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates4_1
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_fore_L
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_hind_L
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_hind_R
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_mid_L
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_mid_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: RIG_bodyAction
+      takeName: RIG_bodyAction
+      firstFrame: 0
+      lastFrame: 98
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Moose
+        weight: 1
+      - path: Moose_001
+        weight: 1
+      - path: Moose_002
+        weight: 1
+      - path: RIG_body
+        weight: 1
+      - path: RIG_body/ROOT
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L/leg_hind_upper_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L/leg_hind_upper_L/leg_hind_lower_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_L/leg_hind_upper_L/leg_hind_lower_L/leg_hind_toe_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R/leg_hind_upper_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R/leg_hind_upper_R/leg_hind_lower_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/hip_R/leg_hind_upper_R/leg_hind_lower_R/leg_hind_toe_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L/leg_mid_upper_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L/leg_mid_upper_L/leg_mid_lower_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_L/leg_mid_upper_L/leg_mid_lower_L/leg_mid_toe_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R/leg_mid_upper_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R/leg_mid_upper_R/leg_mid_lower_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/shoulder_mid_R/leg_mid_upper_R/leg_mid_lower_R/leg_mid_toe_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L/leg_fore_upper_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_toe_L
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R/leg_fore_upper_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/shoulder_fore_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_toe_R
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/mane3_root
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/mane3_root/mane3_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/mane3_root/mane3_1/mane3_2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/mane2_root
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/mane2_root/mane2_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/mane2_root/mane2_1/mane2_2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/mane1_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/spine7/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/mane1_1/mane1_2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1/tail2
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1/tail2/tail3
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/IK_spine_end/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates1_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates2_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates3_1
+        weight: 1
+      - path: RIG_body/ROOT/IK_spine_fore/plates4_1
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_fore_L
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_hind_L
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_hind_R
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_mid_L
+        weight: 1
+      - path: RIG_body/ROOT/POLE_leg_mid_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
