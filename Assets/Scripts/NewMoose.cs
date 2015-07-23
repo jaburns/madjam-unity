@@ -15,6 +15,7 @@ public class NewMoose : MonoBehaviour
     float _vx;
     GameObject _floor;
     bool _newFloor;
+    bool _floorIsElevator;
 
     void Awake()
     {
@@ -30,6 +31,10 @@ public class NewMoose : MonoBehaviour
         if (_newFloor) {
             _floor.SendMessage("WalkOn", null, SendMessageOptions.DontRequireReceiver);
             _newFloor = false;
+        }
+
+        if (_floorIsElevator) {
+            Debug.Log("The floor is elevator");
         }
 
         bool pressingLeft = false;
@@ -74,7 +79,9 @@ public class NewMoose : MonoBehaviour
         foreach (var contact in col.contacts) {
             if (BirdyController.normalIsFloor(contact.normal)) {
                 _floor = contact.collider.gameObject;
-                transform.parent = _floor.transform;
+                if (_floor.GetComponent<ElevatorPlatform>() != null) {
+                    _floorIsElevator = true;
+                }
                 _newFloor = true;
                 break;
             }
@@ -93,10 +100,10 @@ public class NewMoose : MonoBehaviour
 
     void leaveFloor()
     {
-        transform.parent = null;
         if (_floor != null) {
             _floor.SendMessage("WalkOff", null, SendMessageOptions.DontRequireReceiver);
-            _floor = null;
         }
+        _floor = null;
+        _floorIsElevator = false;
     }
 }
