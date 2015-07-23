@@ -65,7 +65,11 @@ public class NewMoose : MonoBehaviour
             }
         }
 
-        _rb.velocity = new Vector2(_vx, _rb.velocity.y);
+        if (_floorIsElevator) {
+            _rb.velocity = new Vector2(_vx, -1);
+        } else {
+            _rb.velocity = new Vector2(_vx, _rb.velocity.y);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
