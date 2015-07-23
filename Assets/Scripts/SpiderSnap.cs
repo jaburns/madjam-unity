@@ -60,6 +60,8 @@ public class SpiderSnap : MonoBehaviour
         enabled = true;
         _target = target;
 
+        _target.gameObject.SendMessage("WalkOn", null, SendMessageOptions.DontRequireReceiver);
+
         _curPos = worldCoordsToSurfaceCoords(pos, normal);
         _lastNormal = Vector2.right.Rotate(_curPos.normalDegrees);
         _lastPos = _curPos;
@@ -69,6 +71,8 @@ public class SpiderSnap : MonoBehaviour
     public void Unsnap()
     {
         if (_target == null) return;
+
+        _target.gameObject.SendMessage("WalkOff", null, SendMessageOptions.DontRequireReceiver);
 
         enabled = false;
         _target = null;
@@ -108,9 +112,9 @@ public class SpiderSnap : MonoBehaviour
 
     bool linecastAndSnap(Vector2 p0, Vector2 p1)
     {
-        var hits = Physics2D.LinecastAll(p0, p1, MooseController.CollisionLayerMask).Where(h => h.rigidbody == _target).ToArray();
-        if (!hits.Any()) return false;
-        var hit = hits.FirstOrDefault();
+        var hits = Physics2D.LinecastAll(p0, p1, MooseController.CollisionLayerMask);
+        if (hits.Length < 1) return false;
+        var hit = hits[0];
 
         if (hit.point.VeryNear(p0)) return false;
 
@@ -119,7 +123,13 @@ public class SpiderSnap : MonoBehaviour
             return true;
         }
 
-        moveToSurfaceCoord(worldCoordsToSurfaceCoords(hit.point, hit.normal));
+        if (hit.rigidbody != _target) {
+            Unsnap();
+            SnapTo(hit.rigidbody, hit.point, hit.normal);
+        } else {
+            moveToSurfaceCoord(worldCoordsToSurfaceCoords(hit.point, hit.normal));
+        }
+
         return true;
     }
 

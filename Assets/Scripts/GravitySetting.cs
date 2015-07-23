@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 static public class GravitySetting
 {
@@ -17,5 +18,9 @@ static public class GravitySetting
     {
         s_reverseGravity = !s_reverseGravity;
         if (OnGravitySwitch != null) OnGravitySwitch();
+
+        Physics2D.gravity = s_reverseGravity
+            ? new Vector2(0,  Mathf.Abs(Physics2D.gravity.y))
+            : new Vector2(0, -Mathf.Abs(Physics2D.gravity.y));
     }
 }

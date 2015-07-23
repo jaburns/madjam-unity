@@ -236,6 +236,7 @@ public class MooseController : MonoBehaviour
             var pt1 = newPos + offset + _heroDim.HalfWidth * Vector2.right;
             Debug.DrawLine(pt0, pt1, Color.green);
 
+            // hmm
             var maybeHit = DoubleLineCast.Cast(pt0, pt1, CollisionLayerMask);
             if (maybeHit.HasValue && normalIsWall(maybeHit.Value.normal)) {
                 newPos.x = maybeHit.Value.point.x + Mathf.Sign(maybeHit.Value.normal.x) * _heroDim.HalfWidth;

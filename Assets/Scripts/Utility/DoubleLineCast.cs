@@ -36,7 +36,11 @@ static public class DoubleLineCast
 
         // Redo the cast from the other direction if we had started from inside a wall last time.
 
-        hit = Physics2D.LinecastAll(p1, p0, layerMask)[0];
+        var hits2 = Physics2D.LinecastAll(p1, p0, layerMask);
+        if (hits2.Length < 1) {
+            return new Result(false, p1, hit);
+        }
+        hit = hits2[0];
 
         return new Result(p1.VeryNear(hit.point), p0, hit);
     }
