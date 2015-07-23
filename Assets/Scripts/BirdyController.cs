@@ -8,7 +8,6 @@ public class BirdyController : MonoBehaviour
     BlobBinder _blobBinder;
     Rigidbody2D _rb;
     GameObject _floor;
-    bool _newFloor;
 
     void Awake ()
     {
@@ -29,17 +28,13 @@ public class BirdyController : MonoBehaviour
     {
         transform.parent = null;
         _rb.isKinematic = false;
-        if (_floor != null) {
-            _floor.SendMessage("WalkOff", null, SendMessageOptions.DontRequireReceiver);
-            _floor = null;
-        }
+        _floor = null;
     }
 
     void FixedUpdate()
     {
-        if (_newFloor) {
-            _floor.SendMessage("WalkOn", null, SendMessageOptions.DontRequireReceiver);
-            _newFloor = false;
+        if (_floor) {
+            _floor.SendMessage("StayOn", null, SendMessageOptions.DontRequireReceiver);
         }
 
         if (_blobBinder.HasBlob) {
@@ -73,7 +68,6 @@ public class BirdyController : MonoBehaviour
                 _floor = contact.collider.gameObject;
                 transform.parent = _floor.transform;
                 _rb.isKinematic = true;
-                _newFloor = true;
                 break;
             }
         }

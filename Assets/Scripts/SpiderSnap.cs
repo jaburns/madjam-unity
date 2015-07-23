@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using UnityEngine;
 
 public class SpiderSnap : MonoBehaviour
@@ -53,6 +52,10 @@ public class SpiderSnap : MonoBehaviour
         else _lastPos = _curPos;
 
         transform.localRotation = Quaternion.Euler(0, 0, _curPos.normalDegrees - 90);
+
+        if (_target != null) {
+            _target.gameObject.SendMessage("StayOn", null, SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     public void SnapTo(Rigidbody2D target, Vector2 pos, Vector2 normal)
@@ -61,8 +64,6 @@ public class SpiderSnap : MonoBehaviour
 
         enabled = true;
         _target = target;
-
-        _target.gameObject.SendMessage("WalkOn", null, SendMessageOptions.DontRequireReceiver);
 
         _curPos = worldCoordsToSurfaceCoords(pos, normal);
         _lastNormal = Vector2.right.Rotate(_curPos.normalDegrees);
@@ -73,8 +74,6 @@ public class SpiderSnap : MonoBehaviour
     public void Unsnap()
     {
         if (_target == null) return;
-
-        _target.gameObject.SendMessage("WalkOff", null, SendMessageOptions.DontRequireReceiver);
 
         enabled = false;
         _target = null;
@@ -126,7 +125,6 @@ public class SpiderSnap : MonoBehaviour
         }
 
         if (hit.rigidbody != _target) {
-            Unsnap();
             SnapTo(hit.rigidbody, hit.point, hit.normal);
         } else {
             moveToSurfaceCoord(worldCoordsToSurfaceCoords(hit.point, hit.normal));

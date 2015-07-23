@@ -5,7 +5,7 @@ public class ElevatorPlatform : MonoBehaviour
     public float MaxY;
 
     Rigidbody2D _rb;
-    bool _on;
+    int _on;
     Vector2 _origin;
 
     void Awake()
@@ -16,11 +16,13 @@ public class ElevatorPlatform : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (_on == GravitySetting.Reverse) {
+        if ((_on > 0) == GravitySetting.Reverse) {
             seekMin();
         } else {
             seekMax();
         }
+
+        if (_on > 0) _on--;
     }
 
     void seekMax()
@@ -41,14 +43,9 @@ public class ElevatorPlatform : MonoBehaviour
         }
     }
 
-    void WalkOn()
+    void StayOn()
     {
-        _on = true;
-    }
-
-    void WalkOff()
-    {
-        _on = false;
+        _on = 2;
     }
 }
 

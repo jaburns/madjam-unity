@@ -74,6 +74,10 @@ public class MooseSnap : MonoBehaviour
 
         if (_updateFlag) _updateFlag = false;
         else _lastPos = _curPos;
+
+        if (_target != null) {
+            _target.gameObject.SendMessage("StayOn", null, SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     public void SnapTo(Collider2D target, Rigidbody2D rb, Vector2 pos, Vector2 normal, Vector2 initialVelEstimate)
@@ -84,8 +88,6 @@ public class MooseSnap : MonoBehaviour
 
         _target = target;
         _targetBody = rb;
-
-        _target.gameObject.SendMessage("WalkOn", null, SendMessageOptions.DontRequireReceiver);
 
         _velocityEstimate = initialVelEstimate;
         _curPos = worldCoordsToSurfaceCoords(pos, normal);
@@ -99,8 +101,6 @@ public class MooseSnap : MonoBehaviour
     public void Unsnap()
     {
         if (_target == null) return;
-
-        _target.gameObject.SendMessage("WalkOff", null, SendMessageOptions.DontRequireReceiver);
 
         transform.position = surfaceCoordsToWorldCoords(_curPos);
         enabled = false;
