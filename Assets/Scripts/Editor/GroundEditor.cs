@@ -18,7 +18,7 @@ public class GroundEditor : Editor
 	bool _hasDeleted;
 	bool _editNodes = true;
 
-	const float GRID_SIZE = 1f;
+	const float GRID_SIZE = .5f;
 
 	void OnSceneGUI ()
 	{
