@@ -2,10 +2,8 @@
 
 public class DeathZone : MonoBehaviour
 {
-	void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.name == "BlobTrigger") {
-            Application.LoadLevel(0);
-        }
+        Application.LoadLevel(0);
     }
 }

@@ -19,7 +19,8 @@ public class SpiderController : MonoBehaviour
     static public int CollisionLayerMask { get {
         return ~(
             1 << LayerMask.NameToLayer("Triggers") |
-            1 << LayerMask.NameToLayer("Animals")
+            1 << LayerMask.NameToLayer("Animals") |
+            1 << LayerMask.NameToLayer("Death")
         );
     } }
 
