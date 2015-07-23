@@ -43,7 +43,7 @@ public class BirdyController : MonoBehaviour
 
         if (_blobBinder.HasBlob) {
             if (Controls.Instance.Act == Controls.ControlState.Press) {
-                _rb.velocity += Vector2.up * 5;
+                _rb.velocity += Vector2.up * 5 * (GravitySetting.Reverse ? -1 : 1);
                 leaveFloor();
             }
             if (!_rb.isKinematic) {

@@ -433,7 +433,7 @@ GameObject:
   - 114: {fileID: 11487206}
   m_Layer: 8
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: AnimalTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3351,7 +3351,7 @@ Animator:
   m_GameObject: {fileID: 198782}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 45d1aa5d48f914f1ca419bf31a43e8f0, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4050e24420086443fac4959ee221d6b9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
