@@ -12,6 +12,8 @@ public class SpiderController : MonoBehaviour
     Vector2 _newPosition;
     float _vely;
     int _fallCheckCountdown;
+    bool _faceRight;
+    Animator _anim;
 
     SpiderSnap _snap;
     BlobBinder _blobBinder;
@@ -32,6 +34,7 @@ public class SpiderController : MonoBehaviour
 
         _snap = GetComponent<SpiderSnap>();
         _blobBinder = GetComponentInChildren<BlobBinder>();
+        _anim = GetComponentInChildren<Animator>();
     }
 
     void Start()
@@ -73,11 +76,16 @@ public class SpiderController : MonoBehaviour
     {
         _oldPosition = _newPosition;
 
+        var t = _anim.gameObject.transform;
+        t.localScale = t.localScale.WithZ(Mathf.Abs(t.localScale.z) * (_faceRight ? 1 : -1));
+
         if (_snap.enabled) {
             if (_blobBinder.HasBlob) {
                 if (Controls.IsDown(Controls.Instance.Right)) {
+                    _faceRight = true;
                     _snap.MoveClockwise(SPEED);
                 } else if (Controls.IsDown(Controls.Instance.Left)) {
+                    _faceRight = false;
                     _snap.MoveClockwise(-SPEED);
                 }
                 if (isNormalLetGoable(_snap.Normal) && Controls.IsDown(Controls.Instance.Act)) {
