@@ -10,11 +10,11 @@ public class BirdyController : MonoBehaviour
     GameObject _floor;
     bool _newFloor;
 
-	void Awake ()
-	{
-	    _blobBinder = GetComponentInChildren<BlobBinder>();
-	    _rb = GetComponent<Rigidbody2D>();
-	}
+    void Awake ()
+    {
+        _blobBinder = GetComponentInChildren<BlobBinder>();
+        _rb = GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class BirdyController : MonoBehaviour
         }
     }
 
-	void FixedUpdate()
+    void FixedUpdate()
     {
         if (_newFloor) {
             _floor.SendMessage("WalkOn", null, SendMessageOptions.DontRequireReceiver);
@@ -61,7 +61,7 @@ public class BirdyController : MonoBehaviour
         if (_rb.velocity.y < -MAX_Y) _rb.velocity = _rb.velocity.WithY(-MAX_Y);
     }
 
-    static bool normalIsFloor(Vector2 normal)
+    static public bool normalIsFloor(Vector2 normal)
     {
         return GravitySetting.Reverse ? normal.y < -0.5 : normal.y > 0.5;
     }
@@ -69,7 +69,7 @@ public class BirdyController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         foreach (var contact in col.contacts) {
-            if (normalIsFloor(contact.normal)) {
+            if (BirdyController.normalIsFloor(contact.normal)) {
                 _floor = contact.collider.gameObject;
                 transform.parent = _floor.transform;
                 _rb.isKinematic = true;

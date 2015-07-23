@@ -2,8 +2,9 @@
 
 public class Smashable : MonoBehaviour
 {
-	public void Smash()
+	void Smash()
     {
-        Destroy(gameObject);
+        Debug.Log("Smash");
+        transform.position = 1000 * Vector3.up;
     }
 }

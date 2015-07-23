@@ -2,8 +2,10 @@
 
 public class SpiderController : MonoBehaviour
 {
-    float GRAVITY  =  2 * MooseController.MOVEMENT_SCALE;
-    const float MAX_FALL = 16 * MooseController.MOVEMENT_SCALE;
+    const float MOVEMENT_SCALE = 0.62f / 17.6f;
+
+    float GRAVITY  =  2 * MOVEMENT_SCALE;
+    const float MAX_FALL = 16 * MOVEMENT_SCALE;
     const float SPEED    = 0.3f;
 
     Vector2 _oldPosition;
@@ -13,6 +15,14 @@ public class SpiderController : MonoBehaviour
 
     SpiderSnap _snap;
     BlobBinder _blobBinder;
+
+    static public int CollisionLayerMask { get {
+        return ~(
+            1 << LayerMask.NameToLayer("Triggers") |
+            1 << LayerMask.NameToLayer("Animals") |
+            1 << LayerMask.NameToLayer("Edges")
+        );
+    } }
 
     void Awake()
     {
@@ -92,7 +102,7 @@ public class SpiderController : MonoBehaviour
             } else {
                 var p0 = transform.position.AsVector2();
                 var p1 = transform.position.AsVector2() + (Vector2.up*_vely*1.5f);
-                var hit = Physics2D.Linecast(p0, p1, MooseController.CollisionLayerMask);
+                var hit = Physics2D.Linecast(p0, p1, CollisionLayerMask);
                 if (hit.rigidbody && !isNormalLetGoable(hit.normal) && !p0.VeryNear(hit.point)) {
                     _snap.SnapTo(hit.rigidbody, hit.point, hit.normal);
                 }
