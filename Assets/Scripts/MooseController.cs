@@ -128,6 +128,7 @@ public class MooseController : MonoBehaviour
 
         var t = _anim.gameObject.transform;
         t.localScale = t.localScale.WithZ(Mathf.Abs(t.localScale.z) * (_faceRight ? 1 : -1));
+        _blobBinder.transform.localPosition = _blobBinder.transform.localPosition.WithX(Mathf.Abs(_blobBinder.transform.localPosition.x) * (_faceRight ? 1 : -1));
 
         if (_stampedeCount == 0 && Controls.Instance.Act == Controls.ControlState.Press && _blobBinder.HasBlob) {
             _stampedeCount = STAMPEDE_LENGTH;
@@ -157,6 +158,8 @@ public class MooseController : MonoBehaviour
         } else {
             freeMovement();
         }
+
+        _anim.SetFloat("speed", Mathf.Abs(_vel.x)*100);
     }
 
     static bool normalIsGround(Vector2 n) { return n.y >=  Mathf.Cos(Mathf.PI / 3); }
