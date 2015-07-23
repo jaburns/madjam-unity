@@ -2,8 +2,8 @@
 
 public class Door : MonoBehaviour
 {
-	void OnSwitch()
-	{
-	    Destroy(gameObject);
+    void OnSwitch()
+    {
+        Destroy(gameObject);
     }
 }
