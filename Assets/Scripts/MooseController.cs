@@ -21,10 +21,7 @@ public class MooseController : MonoBehaviour
     const int   WAIT_TO_GRAZE_AFTER_MOVING = 30;
 
     static public int CollisionLayerMask { get {
-        return ~(
-            1 << LayerMask.NameToLayer("Triggers") |
-            1 << LayerMask.NameToLayer("Bird")
-        );
+        return SpiderController.CollisionLayerMask;
     } }
 
     MooseDimensions _heroDim;
@@ -115,9 +112,9 @@ public class MooseController : MonoBehaviour
                 } else if (_idleState > 0 && transform.position.x > _idleFenceRight) {
                     _idleState = -1;
                 }
-
-                pressingLeft = _idleState < 0;
-                pressingRight = _idleState > 0;
+// Disable erratic grazing
+//                pressingLeft = _idleState < 0;
+//                pressingRight = _idleState > 0;
 
                 Debug.DrawLine(new Vector3(_idleFenceLeft, 1000, 0), new Vector3(_idleFenceLeft, -1000, 0));
                 Debug.DrawLine(new Vector3(_idleFenceRight, 1000, 0), new Vector3(_idleFenceRight, -1000, 0));
