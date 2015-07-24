@@ -12,6 +12,7 @@ static public class GravitySetting
     {
         s_reverseGravity = false;
         OnGravitySwitch = null;
+        Physics2D.gravity = new Vector2(0, -Mathf.Abs(Physics2D.gravity.y));
     }
 
     static public void SwitchGravity()

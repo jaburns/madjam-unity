@@ -5,6 +5,8 @@ public class MooseController : MonoBehaviour
     // Ratio of Flash game coordinate space to Unity units.
     public const float MOVEMENT_SCALE = 0.62f / 17.6f;
     //3.5227e-2f
+    //
+    public Transform ModelHolder;
 
     // Left/right movement
     const float MAX_RUN   = 4 * MOVEMENT_SCALE;
@@ -35,6 +37,7 @@ public class MooseController : MonoBehaviour
     int _cantSnapCounter;
     bool _faceRight = true;
 
+    float _roto;
     float _idleFenceLeft;
     float _idleFenceRight;
     int _idleState;
@@ -86,6 +89,21 @@ public class MooseController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (GravitySetting.Reverse) {
+            if (_roto < 180) {
+                _roto += 30;
+            } else {
+                _roto = 180;
+            }
+        } else {
+            if (_roto > 0) {
+                _roto -= 30;
+            } else {
+                _roto = 0;
+            }
+        }
+        ModelHolder.localRotation = Quaternion.Euler(_roto, 0, 0);
+
         if (_cantSnapCounter > 0) _cantSnapCounter--;
         _oldPosition = _newPosition;
 

@@ -2,9 +2,15 @@
 
 public class BlobController : MonoBehaviour
 {
+    static public Vector3? s_checkedPoint;
+
     public float BindRange;
 
+    float _t;
+    bool _globbing;
+
     BlobBinder _binder;
+    Transform _oldBinder;
 
     void Awake()
     {
@@ -14,7 +20,12 @@ public class BlobController : MonoBehaviour
     void FixedUpdate()
     {
         if (_binder == null) {
+            if (s_checkedPoint.HasValue) {
+                transform.position = s_checkedPoint.Value;
+            }
             bindTo(getClosestBinder());
+            var cam = FindObjectOfType<CameraController>();
+            cam.transform.position = transform.position.WithZ(cam.transform.position.z);
         }
         if (Controls.Instance.Swap == Controls.ControlState.Press) {
             bindTo(getClosestBinder());
@@ -23,6 +34,30 @@ public class BlobController : MonoBehaviour
         if (Controls.Instance.Trick == Controls.ControlState.Press) {
             GravitySetting.SwitchGravity();
         }
+    }
+
+    void Update()
+    {
+        if (!_globbing) return;
+        _t += Time.deltaTime * 2;
+
+        if (_oldBinder == null || _t >= 1) {
+            _binder.HasBlob = true;
+            transform.position = _binder.transform.position;
+            transform.parent = _binder.transform;
+            _globbing = false;
+            _oldBinder = null;
+        } else {
+            var t = damp(_t);
+            transform.position = _oldBinder.position + (_binder.transform.position - _oldBinder.position) * t;
+        }
+    }
+
+    static float damp(float t)
+    {
+        if (t < 0) t = 0;
+        else if (t > 1) t = 1;
+        return 0.5f - 0.5f*Mathf.Cos(Mathf.PI*t);
     }
 
     BlobBinder getClosestBinder()
@@ -51,12 +86,18 @@ public class BlobController : MonoBehaviour
     void bindTo(BlobBinder binder)
     {
         if (binder == null) return;
-        if (_binder) _binder.HasBlob = false;
+        if (_binder) {
+            _binder.HasBlob = false;
+            _oldBinder = _binder.transform;
+        }
 
         _binder = binder;
-        _binder.HasBlob = true;
-        MusicController.Instance.SetMusic(_binder.MusicIndex);
-        transform.position = _binder.transform.position;
-        transform.parent = _binder.transform;
+        _globbing = true;
+        _t = 0;
+
+        if (MusicController.Instance) {
+            MusicController.Instance.SetMusic(_binder.MusicIndex);
+        }
     }
+
 }
