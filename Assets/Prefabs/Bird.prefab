@@ -1747,6 +1747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HasBlob: 0
+  MusicIndex: 0
 --- !u!114 &11457650
 MonoBehaviour:
   m_ObjectHideFlags: 1

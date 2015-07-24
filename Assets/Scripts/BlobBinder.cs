@@ -3,4 +3,5 @@
 public class BlobBinder : MonoBehaviour
 {
     public bool HasBlob;
+    public int MusicIndex;
 }

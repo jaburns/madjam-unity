@@ -55,6 +55,7 @@ public class BlobController : MonoBehaviour
 
         _binder = binder;
         _binder.HasBlob = true;
+        MusicController.Instance.SetMusic(_binder.MusicIndex);
         transform.position = _binder.transform.position;
         transform.parent = _binder.transform;
     }
