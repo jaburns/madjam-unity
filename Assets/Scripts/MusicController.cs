@@ -16,6 +16,7 @@ public class MusicController : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         reset();
     }
 

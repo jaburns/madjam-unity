@@ -5,6 +5,6 @@ public class DeathZone : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag != "AnimalTrigger") return;
-        Application.LoadLevel(0);
+        Application.LoadLevel("Level");
     }
 }

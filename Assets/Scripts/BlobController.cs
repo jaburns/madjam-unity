@@ -2,6 +2,8 @@
 
 public class BlobController : MonoBehaviour
 {
+    static public Vector3? s_checkedPoint;
+
     public float BindRange;
 
     BlobBinder _binder;
@@ -14,7 +16,12 @@ public class BlobController : MonoBehaviour
     void FixedUpdate()
     {
         if (_binder == null) {
+            if (s_checkedPoint.HasValue) {
+                transform.position = s_checkedPoint.Value;
+            }
             bindTo(getClosestBinder());
+            var cam = FindObjectOfType<CameraController>();
+            cam.transform.position = transform.position.WithZ(cam.transform.position.z);
         }
         if (Controls.Instance.Swap == Controls.ControlState.Press) {
             bindTo(getClosestBinder());
@@ -55,7 +62,9 @@ public class BlobController : MonoBehaviour
 
         _binder = binder;
         _binder.HasBlob = true;
-        MusicController.Instance.SetMusic(_binder.MusicIndex);
+        if (MusicController.Instance) {
+            MusicController.Instance.SetMusic(_binder.MusicIndex);
+        }
         transform.position = _binder.transform.position;
         transform.parent = _binder.transform;
     }
