@@ -238,6 +238,7 @@ public class MooseController : MonoBehaviour
                 if (_cantSnapCounter == 0) {
                     newPos.y = hit.point.y;
                     startSnap(hit.collider, hit.rigidbody, newPos - offset, hit.normal);
+                    newPos.y = (hit.point - Vector2.up * _heroDim.Height).y;
                 }
             }
         }

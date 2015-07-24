@@ -9,7 +9,6 @@ public class Loader : MonoBehaviour
 
     public void OnClickStart()
     {
-        Debug.Log("hi");
         Application.LoadLevel("Level");
     }
 }

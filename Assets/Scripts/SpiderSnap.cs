@@ -40,6 +40,7 @@ public class SpiderSnap : MonoBehaviour
         var p1 = surfaceCoordsToWorldCoords(_curPos);
 
         transform.position = p0 + (p1 - p0) * dt;
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(0, 0, _curPos.normalDegrees - 90), 0.5f);
     }
 
     void FixedUpdate()
@@ -50,8 +51,6 @@ public class SpiderSnap : MonoBehaviour
 
         if (_updateFlag) _updateFlag = false;
         else _lastPos = _curPos;
-
-        transform.localRotation = Quaternion.Euler(0, 0, _curPos.normalDegrees - 90);
 
         if (_target != null) {
             _target.gameObject.SendMessage("StayOn", null, SendMessageOptions.DontRequireReceiver);
