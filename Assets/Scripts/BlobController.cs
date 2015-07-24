@@ -39,7 +39,7 @@ public class BlobController : MonoBehaviour
     void LateUpdate()
     {
         if (!_globbing) {
-            transform.position = _binder.Target.transform.position;
+            if (_binder) transform.position = _binder.Target.transform.position;
             return;
         }
         _t += Time.deltaTime * 2;
