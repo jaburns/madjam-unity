@@ -36,20 +36,22 @@ public class BlobController : MonoBehaviour
         }
     }
 
-    void Update()
+    void LateUpdate()
     {
-        if (!_globbing) return;
+        if (!_globbing) {
+            transform.position = _binder.Target.transform.position;
+            return;
+        }
         _t += Time.deltaTime * 2;
 
         if (_oldBinder == null || _t >= 1) {
             _binder.HasBlob = true;
-            transform.position = _binder.transform.position;
-            transform.parent = _binder.transform;
+            transform.position = _binder.Target.transform.position;
             _globbing = false;
             _oldBinder = null;
         } else {
             var t = damp(_t);
-            transform.position = _oldBinder.transform.position + (_binder.transform.position - _oldBinder.transform.position) * t;
+            transform.position = _oldBinder.Target.transform.position + (_binder.Target.transform.position - _oldBinder.Target.transform.position) * t;
         }
     }
 
@@ -67,7 +69,7 @@ public class BlobController : MonoBehaviour
 
         foreach (var binder in FindObjectsOfType<BlobBinder>()) {
             if (binder.HasBlob) continue;
-            var d2 = (binder.transform.position.WithZ(0) - transform.position.WithZ(0)).sqrMagnitude;
+            var d2 = (binder.Target.transform.position.WithZ(0) - transform.position.WithZ(0)).sqrMagnitude;
             if (d2 < closestDist) {
                 closestDist = d2;
                 closestBinder = binder;
@@ -91,7 +93,6 @@ public class BlobController : MonoBehaviour
             _oldBinder = _binder;
         }
 
-        transform.parent = null;
         _binder = binder;
         _globbing = true;
         _t = 0;
@@ -100,5 +101,4 @@ public class BlobController : MonoBehaviour
             MusicController.Instance.SetMusic(_binder.MusicIndex);
         }
     }
-
 }
