@@ -61,6 +61,7 @@ ModelImporter:
     100106: wing_R
     100108: wing_tip_L
     100110: wing_tip_R
+    100112: BLOB_CONNECT
     400000: //RootNode
     400002: antennae1_L
     400004: antennae1_R
@@ -117,6 +118,7 @@ ModelImporter:
     400106: wing_R
     400108: wing_tip_L
     400110: wing_tip_R
+    400112: BLOB_CONNECT
     2300000: //RootNode
     3300000: //RootNode
     4300000: Birdbug

@@ -6,12 +6,32 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: bottom
+    100006: BRAIN_CONNECT
+    100008: center
+    100010: Goo
+    100012: wiggle_back
+    100014: wiggle_front
+    100016: wiggle_L
+    100018: wiggle_R
     400000: //RootNode
+    400002: Armature
+    400004: bottom
+    400006: BRAIN_CONNECT
+    400008: center
+    400010: Goo
+    400012: wiggle_back
+    400014: wiggle_front
+    400016: wiggle_L
+    400018: wiggle_R
     2300000: //RootNode
     3300000: //RootNode
     4300000: Goo
     7400000: Default Take
+    7400002: ArmatureAction
     9500000: //RootNode
+    13700000: Goo
   materials:
     importMaterials: 1
     materialName: 0
