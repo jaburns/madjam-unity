@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Character_Gecko UV
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 7a33bddd4e0df544badef5271c5cfa11, type: 3}
+  m_ShaderKeywords: TCP2_RIM TCP2_RIMDIR
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -78,6 +78,13 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Ramp
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -127,6 +134,22 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _RampThreshold
+        second: .340000004
+      data:
+        first:
+          name: _RampSmooth
+        second: .870000005
+      data:
+        first:
+          name: _RimMin
+        second: .469999999
+      data:
+        first:
+          name: _RimMax
+        second: 1
     m_Colors:
       data:
         first:
@@ -136,3 +159,19 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: .973399997, b: .973399997, a: 1}
+      data:
+        first:
+          name: _HColor
+        second: {r: .600000024, g: .600000024, b: .600000024, a: 1}
+      data:
+        first:
+          name: _SColor
+        second: {r: .400000006, g: .400000006, b: .400000006, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .800000012, g: .800000012, b: .800000012, a: .600000024}
+      data:
+        first:
+          name: _RimDir
+        second: {r: 0, g: 0, b: 1, a: 0}
