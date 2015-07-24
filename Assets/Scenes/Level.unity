@@ -2749,6 +2749,7 @@ MonoBehaviour:
   Speed: .0199999996
 --- !u!50 &149868323
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2757,11 +2758,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &152629950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,6 +5091,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
+  m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &282985930
 MonoBehaviour:
@@ -17939,6 +17941,7 @@ MonoBehaviour:
   Speed: .0500000007
 --- !u!50 &885703337
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -17947,11 +17950,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!43 &893932387
 Mesh:
   m_ObjectHideFlags: 0
@@ -20733,6 +20736,7 @@ MonoBehaviour:
   MaxY: 16
 --- !u!50 &1032152100
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -20741,11 +20745,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1036404063
 GameObject:
   m_ObjectHideFlags: 0
@@ -29710,8 +29714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc855a2e172ee491bbe67c478137ff1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAuto: 0
-  activeFor: 1
+  fadeOutAuto: 1
+  activeFor: 3
 --- !u!114 &1592963152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33168,11 +33172,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 487316, guid: c437fc6863afc4ab1872a4789b457735, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .930000007
+      value: 31.2000008
       objectReference: {fileID: 0}
     - target: {fileID: 487316, guid: c437fc6863afc4ab1872a4789b457735, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.70000005
+      value: -11.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 487316, guid: c437fc6863afc4ab1872a4789b457735, type: 2}
       propertyPath: m_LocalPosition.z
@@ -36847,6 +36851,18 @@ MonoBehaviour:
   StepSize: 1.5
   FlipNormals: 0
   UseJaggies: 0
+--- !u!1 &1999065713 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 118618, guid: 522932f94955c4db780715f3c4cc3920, type: 2}
+  m_PrefabInternal: {fileID: 185885461}
+--- !u!45 &1999065714
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999065713}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 12ccb828343c3405fb94289774b51aad, type: 2}
 --- !u!1 &2011215173
 GameObject:
   m_ObjectHideFlags: 0
@@ -38124,6 +38140,7 @@ Transform:
   m_RootOrder: 9
 --- !u!50 &2092802142
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -38132,11 +38149,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2093858744
 GameObject:
   m_ObjectHideFlags: 0
@@ -38256,6 +38273,7 @@ MonoBehaviour:
   Speed: .0500000007
 --- !u!50 &2093858751
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -38264,11 +38282,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 0
   m_IsKinematic: 1
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2097466682
 GameObject:
   m_ObjectHideFlags: 0
