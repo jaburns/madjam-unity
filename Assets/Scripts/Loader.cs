@@ -34,6 +34,7 @@ public class Loader : MonoBehaviour
 
     public void OnUpArrow()
     {
+
     }
     public void OnDownArrow()
     {
