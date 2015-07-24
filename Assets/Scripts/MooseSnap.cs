@@ -67,6 +67,12 @@ public class MooseSnap : MonoBehaviour
         if (GravitySetting.Reverse) {
             transform.position -= Vector3.up * _heroDim.Height;
         }
+
+        if (GravitySetting.Reverse) {
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(0, 0, _curPos.normalDegrees + 90), 0.2f);
+        } else {
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(0, 0, _curPos.normalDegrees - 90), 0.2f);
+        }
     }
 
     void FixedUpdate()

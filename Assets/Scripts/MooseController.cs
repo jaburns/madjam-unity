@@ -79,6 +79,10 @@ public class MooseController : MonoBehaviour
         var p0 = _oldPosition.AsVector3(transform.position.z);
         var p1 = _newPosition.AsVector3(transform.position.z);
         transform.position = Vector3.Lerp(p0, p1, (Time.time - Time.fixedTime) / Time.fixedDeltaTime);
+
+        if (!_snap.enabled) {
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(0, 0, 0), 0.2f);
+        }
     }
 
     void GravitySwitch()
