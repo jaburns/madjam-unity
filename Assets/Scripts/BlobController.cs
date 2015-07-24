@@ -10,7 +10,7 @@ public class BlobController : MonoBehaviour
     bool _globbing;
 
     BlobBinder _binder;
-    Transform _oldBinder;
+    BlobBinder _oldBinder;
 
     void Awake()
     {
@@ -49,7 +49,7 @@ public class BlobController : MonoBehaviour
             _oldBinder = null;
         } else {
             var t = damp(_t);
-            transform.position = _oldBinder.position + (_binder.transform.position - _oldBinder.position) * t;
+            transform.position = _oldBinder.transform.position + (_binder.transform.position - _oldBinder.transform.position) * t;
         }
     }
 
@@ -88,9 +88,10 @@ public class BlobController : MonoBehaviour
         if (binder == null) return;
         if (_binder) {
             _binder.HasBlob = false;
-            _oldBinder = _binder.transform;
+            _oldBinder = _binder;
         }
 
+        transform.parent = null;
         _binder = binder;
         _globbing = true;
         _t = 0;
