@@ -4,6 +4,7 @@ public class Loader : MonoBehaviour
 {
     public Material GooMaterial;
     public Color[] GooColors;
+    public GameObjet[] Brains;
 
     int _colorIndex;
 
