@@ -4,6 +4,9 @@ public class BlobController : MonoBehaviour
 {
     static public Vector3? s_checkedPoint;
 
+    public GameObject[] Brains;
+    public GameObject BrainBindPoint;
+
     public float BindRange;
 
     float _t;
@@ -15,6 +18,9 @@ public class BlobController : MonoBehaviour
     void Awake()
     {
         GravitySetting.Reset();
+
+        var brain = Instantiate(Brains[Loader.BrainChoice], BrainBindPoint.transform.position, BrainBindPoint.transform.rotation * Quaternion.Euler(0, -90, 180)) as GameObject;
+        brain.transform.parent = BrainBindPoint.transform;
     }
 
     void FixedUpdate()

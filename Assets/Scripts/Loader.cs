@@ -4,13 +4,16 @@ public class Loader : MonoBehaviour
 {
     public Material GooMaterial;
     public Color[] GooColors;
-    public GameObjet[] Brains;
+    public GameObject[] Brains;
+
+    static public int BrainChoice = 0;
 
     int _colorIndex;
 
     void Start ()
     {
         BlobController.s_checkedPoint = null;
+        Brains[1].SetActive(false);
         GooMaterial.color = GooColors[_colorIndex];
     }
 
@@ -35,9 +38,13 @@ public class Loader : MonoBehaviour
 
     public void OnUpArrow()
     {
-
+        BrainChoice = 1 - BrainChoice;
+        Brains[0].SetActive(!Brains[0].active);
+        Brains[1].SetActive(!Brains[1].active);
     }
+
     public void OnDownArrow()
     {
+        OnUpArrow();
     }
 }
