@@ -16,7 +16,7 @@ public class SpiderController : MonoBehaviour
     Animator _anim;
 
     SpiderSnap _snap;
-    BlobBinder _blobBinder;
+    public BlobBinder _blobBinder { get; set; }
 
     static public int CollisionLayerMask { get {
         return ~(
@@ -80,6 +80,8 @@ public class SpiderController : MonoBehaviour
 
         var t = _anim.gameObject.transform;
         t.localScale = t.localScale.WithZ(Mathf.Abs(t.localScale.z) * (_faceRight ? 1 : -1));
+
+        _anim.SetBool("walking", false);
 
         if (_snap.enabled) {
             if (_blobBinder.HasBlob) {

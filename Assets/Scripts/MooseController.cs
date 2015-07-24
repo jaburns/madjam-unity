@@ -45,7 +45,7 @@ public class MooseController : MonoBehaviour
     int _afterControlsCount;
     int _stampedeCount;
 
-    BlobBinder _blobBinder;
+    public BlobBinder _blobBinder { get; set; }
 
     public Vector2 Position { get { return _snap.enabled ? _snap.Position : _newPosition; } }
     public Vector2 Velocity { get { return _snap.enabled ? _snap.VelocityEstimate : _vel; } }

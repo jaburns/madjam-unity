@@ -94,6 +94,7 @@ public class BlobController : MonoBehaviour
         }
 
         _binder = binder;
+        binder.BlobRef = this;
         _globbing = true;
         _t = 0;
 

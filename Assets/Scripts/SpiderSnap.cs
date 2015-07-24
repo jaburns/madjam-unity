@@ -41,6 +41,9 @@ public class SpiderSnap : MonoBehaviour
 
         transform.position = p0 + (p1 - p0) * dt;
         transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(0, 0, _curPos.normalDegrees - 90), 0.5f);
+        if (_controller._blobBinder.HasBlob) {
+            _controller._blobBinder.BlobRef.transform.localRotation = transform.localRotation;
+        }
     }
 
     void FixedUpdate()

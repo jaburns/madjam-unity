@@ -73,6 +73,10 @@ public class MooseSnap : MonoBehaviour
         } else {
             transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(0, 0, _curPos.normalDegrees - 90), 0.2f);
         }
+
+        if (_mooseController._blobBinder.HasBlob) {
+            _mooseController._blobBinder.BlobRef.transform.localRotation = transform.rotation * _mooseController.ModelHolder.rotation;
+        }
     }
 
     void FixedUpdate()

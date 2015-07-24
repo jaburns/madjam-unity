@@ -37,6 +37,13 @@ public class BirdyController : MonoBehaviour
         _floor = null;
     }
 
+    void Update()
+    {
+        if (_blobBinder.HasBlob) {
+            _blobBinder.BlobRef.transform.localRotation = transform.rotation * ModelHolder.rotation;
+        }
+    }
+
     void FixedUpdate()
     {
         if (GravitySetting.Reverse) {
