@@ -65,6 +65,8 @@ public class SpiderController : MonoBehaviour
 
     void endSnap()
     {
+        _anim.SetBool("falling", true);
+        _anim.SetBool("walking", false);
         _snap.Unsnap();
         _vely = 0;
         _fallCheckCountdown = 2;
@@ -84,15 +86,21 @@ public class SpiderController : MonoBehaviour
                 if (Controls.IsDown(Controls.Instance.Right)) {
                     _faceRight = true;
                     _snap.MoveClockwise(SPEED);
+                    _anim.SetBool("walking", true);
                 } else if (Controls.IsDown(Controls.Instance.Left)) {
                     _faceRight = false;
                     _snap.MoveClockwise(-SPEED);
+                    _anim.SetBool("walking", true);
+                } else {
+                    _anim.SetBool("walking", false);
                 }
                 if (isNormalLetGoable(_snap.Normal) && Controls.IsDown(Controls.Instance.Act)) {
                     _snap.Unsnap();
                 }
             }
             if (!_snap.enabled) {
+                _anim.SetBool("falling", true);
+                _anim.SetBool("walking", false);
                 _vely = 0;
                 _fallCheckCountdown = 2;
                 _oldPosition = transform.position.AsVector2();
@@ -113,6 +121,7 @@ public class SpiderController : MonoBehaviour
                 var hit = Physics2D.Linecast(p0, p1, CollisionLayerMask);
                 if (hit.rigidbody && !isNormalLetGoable(hit.normal) && !p0.VeryNear(hit.point)) {
                     _snap.SnapTo(hit.rigidbody, hit.point, hit.normal);
+                    _anim.SetBool("falling", false);
                 }
             }
         }

@@ -120,6 +120,7 @@ ModelImporter:
     100224: tongue2
     100226: tongue3
     100228: tongue4
+    100230: BLOB_CONNECT
     400000: Armature
     400002: back_frill1_1
     400004: back_frill1_2
@@ -235,11 +236,16 @@ ModelImporter:
     400224: tongue2
     400226: tongue3
     400228: tongue4
+    400230: BLOB_CONNECT
     4300000: Gecko_001
     4300002: Gecko_002
     4300004: Gecko
     7400000: Default Take
     7400002: ArmatureAction
+    7400004: idle
+    7400006: walk
+    7400008: hop
+    7400010: curl
     9500000: //RootNode
     13700000: Gecko
     13700002: Gecko_001
@@ -263,7 +269,1531 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2/back_frill1_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2/back_frill2_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2/back_frill3_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2/back_frill4_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L/leg_rear_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L/leg_rear_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L/leg_rear_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L/leg_rear_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R/leg_rear_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R/leg_rear_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R/leg_rear_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R/leg_rear_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L/leg_fore_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L/leg_fore_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L/leg_fore_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L/leg_fore_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R/leg_fore_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R/leg_fore_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R/leg_fore_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R/leg_fore_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/BLOB_CONNECT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_center
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L/head_frill1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R/head_frill1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L/head_frill2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R/head_frill2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L/head_frill3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R/head_frill3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3/tongue4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L/tail_grippy3_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R/tail_grippy3_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_rear_R
+        weight: 1
+      - path: Gecko
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: ArmatureAction
+      firstFrame: 0
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2/back_frill1_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2/back_frill2_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2/back_frill3_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2/back_frill4_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L/leg_rear_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L/leg_rear_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L/leg_rear_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L/leg_rear_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R/leg_rear_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R/leg_rear_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R/leg_rear_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R/leg_rear_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L/leg_fore_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L/leg_fore_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L/leg_fore_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L/leg_fore_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R/leg_fore_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R/leg_fore_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R/leg_fore_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R/leg_fore_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/BLOB_CONNECT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_center
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L/head_frill1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R/head_frill1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L/head_frill2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R/head_frill2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L/head_frill3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R/head_frill3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3/tongue4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L/tail_grippy3_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R/tail_grippy3_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_rear_R
+        weight: 1
+      - path: Gecko
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2/back_frill1_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2/back_frill2_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2/back_frill3_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2/back_frill4_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L/leg_rear_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L/leg_rear_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L/leg_rear_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L/leg_rear_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R/leg_rear_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R/leg_rear_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R/leg_rear_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R/leg_rear_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L/leg_fore_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L/leg_fore_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L/leg_fore_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L/leg_fore_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R/leg_fore_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R/leg_fore_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R/leg_fore_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R/leg_fore_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/BLOB_CONNECT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_center
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L/head_frill1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R/head_frill1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L/head_frill2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R/head_frill2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L/head_frill3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R/head_frill3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3/tongue4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L/tail_grippy3_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R/tail_grippy3_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_rear_R
+        weight: 1
+      - path: Gecko
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: walk
+      takeName: Default Take
+      firstFrame: 80
+      lastFrame: 109
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2/back_frill1_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2/back_frill2_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2/back_frill3_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2/back_frill4_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L/leg_rear_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L/leg_rear_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L/leg_rear_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L/leg_rear_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R/leg_rear_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R/leg_rear_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R/leg_rear_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R/leg_rear_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L/leg_fore_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L/leg_fore_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L/leg_fore_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L/leg_fore_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R/leg_fore_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R/leg_fore_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R/leg_fore_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R/leg_fore_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/BLOB_CONNECT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_center
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L/head_frill1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R/head_frill1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L/head_frill2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R/head_frill2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L/head_frill3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R/head_frill3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3/tongue4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L/tail_grippy3_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R/tail_grippy3_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_rear_R
+        weight: 1
+      - path: Gecko
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: hop
+      takeName: Default Take
+      firstFrame: 111
+      lastFrame: 124
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2/back_frill1_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2/back_frill2_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2/back_frill3_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2/back_frill4_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L/leg_rear_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L/leg_rear_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L/leg_rear_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L/leg_rear_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R/leg_rear_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R/leg_rear_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R/leg_rear_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R/leg_rear_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L/leg_fore_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L/leg_fore_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L/leg_fore_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L/leg_fore_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R/leg_fore_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R/leg_fore_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R/leg_fore_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R/leg_fore_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/BLOB_CONNECT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_center
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L/head_frill1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R/head_frill1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L/head_frill2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R/head_frill2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L/head_frill3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R/head_frill3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3/tongue4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L/tail_grippy3_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R/tail_grippy3_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_rear_R
+        weight: 1
+      - path: Gecko
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: curl
+      takeName: Default Take
+      firstFrame: 128
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/ROOT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill1_1/back_frill1_2/back_frill1_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill2_1/back_frill2_2/back_frill2_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill3_1/back_frill3_2/back_frill3_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/back_frill4_1/back_frill4_2/back_frill4_3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe1_1_L/leg_rear_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe2_1_L/leg_rear_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe3_1_L/leg_rear_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_L/leg_rear_upper_L/leg_rear_lower_L/leg_rear_ankle_L/leg_rear_foot_L/leg_rear_toe4_1_L/leg_rear_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe1_1_R/leg_rear_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe2_1_R/leg_rear_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe3_1_R/leg_rear_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/leg_rear_hip_R/leg_rear_upper_R/leg_rear_lower_R/leg_rear_ankle_R/leg_rear_foot_R/leg_rear_toe4_1_R/leg_rear_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe1_1_L/leg_fore_toe1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe2_1_L/leg_fore_toe2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe3_1_L/leg_fore_toe3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_L/leg_fore_upper_L/leg_fore_lower_L/leg_fore_foot_L/leg_fore_toe4_1_L/leg_fore_toe4_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe1_1_R/leg_fore_toe1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe2_1_R/leg_fore_toe2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe3_1_R/leg_fore_toe3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/leg_fore_shoulder_R/leg_fore_upper_R/leg_fore_lower_R/leg_fore_foot_R/leg_fore_toe4_1_R/leg_fore_toe4_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/BLOB_CONNECT
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_back_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_center
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_front_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/eye_mid_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_L/head_frill1_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill1_1_R/head_frill1_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_L/head_frill2_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill2_1_R/head_frill2_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_L/head_frill3_2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_frill3_1_R/head_frill3_2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/spine6/spine5/spine4/spine3/spine2/spine1/head/head_jaw/tongue1/tongue2/tongue3/tongue4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_L/tail_grippy2_L/tail_grippy3_L
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R
+        weight: 1
+      - path: Armature/ROOT/IK_back_upper/IK_back_lower/tail1/tail2/tail3/tail4/tail5/tail6/tail_grippy1_R/tail_grippy2_R/tail_grippy3_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_fore_R
+        weight: 1
+      - path: Armature/ROOT/POLE_leg_rear_R
+        weight: 1
+      - path: Gecko
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
