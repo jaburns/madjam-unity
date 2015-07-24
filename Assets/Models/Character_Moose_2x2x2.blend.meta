@@ -68,6 +68,7 @@ ModelImporter:
     100120: tail2
     100122: tail3
     100124: tail4
+    100126: BLOB_CONNECT
     400000: //RootNode
     400002: head
     400004: head_jaw
@@ -131,6 +132,7 @@ ModelImporter:
     400120: tail2
     400122: tail3
     400124: tail4
+    400126: BLOB_CONNECT
     4300000: Moose_002
     4300002: Moose_001
     4300004: Moose
