@@ -16,8 +16,13 @@ public class MusicController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        reset();
+        var music = GameObject.Find("TheMusic");
+        if (music && music != gameObject) {
+            Destroy(gameObject);
+        } else {
+            DontDestroyOnLoad(gameObject);
+            reset();
+        }
     }
 
     void reset()

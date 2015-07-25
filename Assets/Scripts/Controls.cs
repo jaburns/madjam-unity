@@ -41,8 +41,8 @@ public class Controls : MonoBehaviour
     public ControlState Right { get { return Enabled ? _right : EMPTY ; } }
     public ControlState Act   { get { return Enabled ? _act   : EMPTY ; } }
     public ControlState Swap  { get { return Enabled ? _swap  : EMPTY ; } }
-    //public ControlState Trick { get { return Enabled ? _trick : EMPTY ; } }
-    public ControlState Trick { get { return EMPTY; }}
+    public ControlState Trick { get { return Enabled ? _trick : EMPTY ; } }
+    //public ControlState Trick { get { return EMPTY; }}
     public ControlState Retry { get { return _retry; } }
 
     static public bool IsDown(ControlState state)

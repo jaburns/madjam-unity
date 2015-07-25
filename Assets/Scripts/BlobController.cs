@@ -25,6 +25,9 @@ public class BlobController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Controls.Instance.Trick == Controls.ControlState.Press) {
+            Application.LoadLevel(0);
+        }
         if (_binder == null) {
             if (s_checkedPoint.HasValue) {
                 transform.position = s_checkedPoint.Value;
