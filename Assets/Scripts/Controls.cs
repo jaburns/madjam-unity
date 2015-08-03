@@ -24,6 +24,7 @@ public class Controls : MonoBehaviour
     const KeyCode ACT   = KeyCode.Space;
     const KeyCode SWAP  = KeyCode.LeftShift;
     const KeyCode RETRY = KeyCode.Backspace;
+    const KeyCode RETRY2= KeyCode.Delete;
     const KeyCode TRICK = KeyCode.Q;
 
     ControlState _left;
@@ -41,8 +42,8 @@ public class Controls : MonoBehaviour
     public ControlState Right { get { return Enabled ? _right : EMPTY ; } }
     public ControlState Act   { get { return Enabled ? _act   : EMPTY ; } }
     public ControlState Swap  { get { return Enabled ? _swap  : EMPTY ; } }
-    public ControlState Trick { get { return Enabled ? _trick : EMPTY ; } }
-    //public ControlState Trick { get { return EMPTY; }}
+    //public ControlState Trick { get { return Enabled ? _trick : EMPTY ; } }
+    public ControlState Trick { get { return EMPTY; }}
     public ControlState Retry { get { return _retry; } }
 
     static public bool IsDown(ControlState state)
@@ -62,7 +63,7 @@ public class Controls : MonoBehaviour
         updateStateFromSignal(ref _act,   Input.GetKey(ACT  ));
         updateStateFromSignal(ref _swap,  Input.GetKey(SWAP ));
         updateStateFromSignal(ref _trick, Input.GetKey(TRICK));
-        updateStateFromSignal(ref _retry, Input.GetKey(RETRY));
+        updateStateFromSignal(ref _retry, Input.GetKey(RETRY) || Input.GetKey(RETRY2));
     }
 
     static void updateStateFromSignal(ref ControlState state, bool signal)
